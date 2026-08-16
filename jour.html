@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12 juin 2026 — Le grand départ</title>
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="chapter-link">Aller & arrivée</div>
+    <nav class="timeline" aria-label="Chronologie du voyage">
+      <div class="timeline-stages">
+        <span>Aller</span><span>Moorea</span><span>Maupiti</span>
+        <span>Taha’a</span><span>Bora Bora</span><span>Tahiti</span><span>Retour</span>
+      </div>
+      <div id="timeline-dates" class="timeline-dates"></div>
+    </nav>
+  </header>
+
+  <main id="day-page" class="day-page"></main>
+
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox-close" type="button" aria-label="Fermer">×</button>
+    <button class="lightbox-prev" type="button" aria-label="Photo précédente">‹</button>
+    <figure>
+      <img id="lightbox-image" src="" alt="">
+      <figcaption id="lightbox-counter"></figcaption>
+    </figure>
+    <button class="lightbox-next" type="button" aria-label="Photo suivante">›</button>
+  </div>
+
+  <script src="data/jours.js"></script>
+  <script src="js/jour.js"></script>
+</body>
+</html>

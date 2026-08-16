@@ -1,0 +1,292 @@
+/* Prototype fonctionnel — galerie inspirée du site du mariage */
+:root{
+  --max:1180px;
+  --border:#d8d8d8;
+  --text:#202020;
+  --muted:#6d6d6d;
+  --surface:#f4f4f4;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:#fff;
+}
+img{display:block;max-width:100%}
+button{font:inherit}
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid var(--border);
+  padding:12px 24px 14px;
+}
+.chapter-link,.timeline{
+  width:min(var(--max),100%);
+  margin:auto;
+}
+.chapter-link{
+  margin-bottom:8px;
+  font-size:14px;
+  font-weight:700;
+}
+.timeline{overflow-x:auto}
+.timeline-stages{
+  min-width:880px;
+  display:grid;
+  grid-template-columns:2fr 3fr 3fr 3fr 3fr 2fr 2fr;
+  gap:4px;
+  margin-bottom:4px;
+  font-size:11px;
+  color:var(--muted);
+  text-align:center;
+}
+.timeline-dates{
+  position:relative;
+  min-width:880px;
+  display:grid;
+  grid-template-columns:repeat(16,1fr);
+  padding-top:8px;
+}
+.timeline-dates:before{
+  content:"";
+  position:absolute;
+  top:12px;
+  left:3%;
+  right:3%;
+  height:1px;
+  background:#9c9c9c;
+}
+.timeline-date{
+  position:relative;
+  padding:14px 2px 0;
+  color:var(--muted);
+  font-size:11px;
+  text-align:center;
+}
+.timeline-date:before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  transform:translateX(-50%);
+  background:#fff;
+  border:1px solid #888;
+}
+.timeline-date.active{
+  color:var(--text);
+  font-weight:700;
+}
+.timeline-date.active:before{
+  width:12px;
+  height:12px;
+  top:-2px;
+  background:#202020;
+  border-color:#202020;
+}
+
+.day-page{
+  width:min(var(--max),calc(100% - 40px));
+  margin:auto;
+  padding:68px 0 90px;
+}
+.day-heading{margin-bottom:70px}
+.day-kicker{
+  margin:0 0 10px;
+  color:var(--muted);
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+.day-title{
+  margin:0;
+  font-size:clamp(38px,6vw,72px);
+  line-height:.98;
+}
+.day-subtitle{
+  max-width:720px;
+  margin:18px 0 0;
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.55;
+}
+
+.sequence{padding:0 0 80px}
+.sequence+.sequence{
+  border-top:1px solid var(--border);
+  padding-top:80px;
+}
+.sequence-number{
+  margin:0 0 8px;
+  color:var(--muted);
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+.sequence h2{
+  margin:0 0 14px;
+  font-size:clamp(28px,4vw,46px);
+}
+.sequence-text{
+  max-width:720px;
+  margin:0 0 28px;
+  font-size:17px;
+  line-height:1.65;
+}
+
+/* GALERIE TYPE "ALBUM"
+   - vignettes toutes de même taille
+   - format carré
+   - recadrage uniquement dans la vignette
+   - clic = photo originale entière dans la lightbox */
+.photo-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,280px));
+  justify-content:center;
+  gap:12px;
+  width:100%;
+}
+.photo-button{
+  width:100%;
+  aspect-ratio:1 / 1;
+  border:0;
+  padding:0;
+  margin:0;
+  background:none;
+  cursor:zoom-in;
+  overflow:hidden;
+}
+.photo-button img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transition:transform .22s ease;
+}
+.photo-button:hover img{
+  transform:scale(1.025);
+}
+
+.route{
+  margin:0 0 80px;
+  padding:30px;
+  min-height:170px;
+  border:1px dashed #aaa;
+  background:var(--surface);
+  display:grid;
+  align-content:center;
+  justify-items:center;
+  text-align:center;
+}
+.route strong{
+  display:block;
+  margin-bottom:8px;
+  font-size:25px;
+}
+.route span{color:var(--muted)}
+
+.day-next{
+  margin-top:10px;
+  border-top:1px solid var(--border);
+  padding-top:48px;
+}
+.next-label{
+  margin:0 0 8px;
+  color:var(--muted);
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+.next-title{
+  margin:0;
+  font-size:clamp(28px,4vw,48px);
+}
+.next-note{
+  margin:12px 0 0;
+  color:var(--muted);
+}
+
+/* Lightbox : photo entière, jamais recadrée */
+.lightbox{
+  position:fixed;
+  inset:0;
+  z-index:100;
+  background:rgba(0,0,0,.94);
+  display:grid;
+  grid-template-columns:70px 1fr 70px;
+  align-items:center;
+}
+.lightbox[hidden]{display:none}
+.lightbox figure{
+  margin:0;
+  height:100vh;
+  min-width:0;
+  display:grid;
+  grid-template-rows:1fr auto;
+  align-items:center;
+  justify-items:center;
+  padding:28px 0 18px;
+}
+.lightbox figure img{
+  max-width:100%;
+  max-height:calc(100vh - 70px);
+  object-fit:contain;
+}
+.lightbox figcaption{
+  color:#fff;
+  font-size:13px;
+  padding-top:8px;
+}
+.lightbox-close,.lightbox-prev,.lightbox-next{
+  border:0;
+  background:transparent;
+  color:#fff;
+  cursor:pointer;
+}
+.lightbox-close{
+  position:absolute;
+  right:22px;
+  top:14px;
+  z-index:2;
+  font-size:42px;
+}
+.lightbox-prev,.lightbox-next{
+  height:100%;
+  font-size:50px;
+}
+
+@media(max-width:900px){
+  .photo-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+
+@media(max-width:700px){
+  .site-header{position:static}
+  .timeline{display:none}
+  .day-page{
+    width:min(100% - 28px,var(--max));
+    padding-top:44px;
+  }
+  .day-heading{margin-bottom:48px}
+  .sequence,.sequence+.sequence{padding-bottom:56px}
+  .sequence+.sequence{padding-top:56px}
+  .route{
+    margin-bottom:56px;
+    min-height:140px;
+    padding:22px;
+  }
+  .photo-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px;
+  }
+  .lightbox{grid-template-columns:42px 1fr 42px}
+  .lightbox-prev,.lightbox-next{font-size:38px}
+}

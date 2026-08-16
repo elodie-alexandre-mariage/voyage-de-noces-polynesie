@@ -1,0 +1,58 @@
+ACCUEIL + SOMMAIRE — PACK ADAPTÉ À TON ARBORESCENCE ACTUELLE
+
+IMPORTANT :
+Ce pack NE crée PAS de dossier assets/ et NE crée PAS de page sommaire séparée.
+Le sommaire reste l'écran 2 de index.html.
+
+À remplacer dans ton dépôt :
+- index.html
+- css/base.css
+- css/accueil.css
+- js/accueil.js
+
+Le fichier js/accueil.txt est uniquement la copie lisible du JavaScript.
+Tu peux le conserver si tu le souhaites.
+
+À NE PAS REMPLACER :
+- data/voyage.js
+- data/jours.js
+- jour.html
+- css/site.css
+- js/jour.js
+- tout le dossier photos/
+- tout le dossier images/
+
+Chemins utilisés pour les logos :
+- images/iles/contour/borabora.png
+- images/iles/contour/maupiti.png
+- images/iles/contour/moorea.png
+- images/iles/contour/tahaa.png
+- images/iles/contour/tahiti.png
+
+et les mêmes noms dans :
+- images/iles/plein/
+
+PLACEMENT VALIDÉ DES LOGOS AU-DESSUS DE LA FRISE :
+- Moorea : jour 14
+- Maupiti : entre 17 et 18
+- Taha'a : entre 20 et 21
+- Bora Bora : entre 23 et 24
+- Tahiti : jour 25
+- Aller : aucun logo
+- Retour : aucun logo
+
+Aucun trait ne relie les logos à la frise.
+Au repos : contour #004976.
+Au survol de la vignette correspondante : version pleine #4698CB.
+
+TYPOGRAPHIE :
+100 % Montserrat.
+
+PALETTE :
+#004976 — bleu profond
+#4698CB — bleu actif
+#B8DFE7 — lignes / éléments doux
+#F4FAFB — surfaces très claires
+
+APRÈS COPIE :
+Ouvre index.html puis fais Ctrl + F5.

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Voyage de noces en Polynésie française — 12 au 27 juin 2026">
+  <title>Voyage de noces — Polynésie française</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/accueil.css">
+</head>
+
+<body class="home">
+  <main>
+    <section id="couverture" class="cover" aria-labelledby="cover-title">
+      <img id="cover-image" class="cover-image" src="" alt="">
+      <div class="cover-overlay" aria-hidden="true"></div>
+
+      <div class="cover-content">
+        <h1 id="cover-title" class="cover-title">
+          <span>Voyage de noces</span>
+          <strong>Polynésie française</strong>
+        </h1>
+        <p class="cover-dates">12 — 27 juin 2026</p>
+      </div>
+
+      <a class="cover-scroll" href="#sommaire" aria-label="Voir le sommaire">
+        <span>Sommaire</span>
+        <span class="cover-arrow" aria-hidden="true">↓</span>
+      </a>
+    </section>
+
+    <section id="sommaire" class="summary" aria-labelledby="summary-title">
+      <div class="summary-shell">
+        <header class="summary-heading">
+          <div>
+            <p class="section-kicker">Notre itinéraire</p>
+            <h2 id="summary-title">16 jours au bout du monde</h2>
+          </div>
+          <p class="summary-intro">
+            De Moorea à Tahiti, notre carnet de voyage jour après jour.
+          </p>
+        </header>
+
+        <div id="chapter-grid" class="chapter-grid" aria-label="Chapitres du voyage"></div>
+
+        <nav class="summary-timeline" aria-label="Dates du voyage, du 12 au 27 juin 2026">
+          <div class="summary-timeline-month">Dates du voyage · Juin 2026</div>
+
+          <div class="summary-timeline-area">
+            <div id="summary-island-logos" class="summary-island-logos" aria-label="Repères des îles"></div>
+
+            <div id="summary-timeline-dates" class="summary-timeline-dates">
+              <span id="summary-timeline-highlight" class="summary-timeline-highlight" aria-hidden="true"></span>
+            </div>
+          </div>
+        </nav>
+
+        <div class="summary-bottom">
+          <div class="map-panel">
+            <div class="map-heading">
+              <span class="map-label">Archipel de la Société</span>
+            </div>
+            <div class="map-frame">
+              <img id="location-map" src="images/cartes/plan_loc.jpg" alt="Carte de localisation des étapes du voyage">
+            </div>
+          </div>
+
+          <aside class="summary-note" aria-label="Carnet de voyage">
+            <p class="note-small">12 → 27 juin 2026</p>
+            <p class="note-main">5 îles,<br>16 jours,<br>un seul voyage.</p>
+            <p class="note-detail">Photos, souvenirs et vidéos de notre voyage de noces.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="data/voyage.js"></script>
+  <script src="js/accueil.js"></script>
+</body>
+</html>
