@@ -37,13 +37,8 @@
     <section id="sommaire" class="summary" aria-labelledby="summary-title">
       <div class="summary-shell">
         <header class="summary-heading">
-          <div>
-            <p class="section-kicker">Notre itinéraire</p>
-            <h2 id="summary-title">16 jours au bout du monde</h2>
-          </div>
-          <p class="summary-intro">
-            De Moorea à Tahiti, notre carnet de voyage jour après jour.
-          </p>
+          <p class="section-kicker">Notre itinéraire</p>
+          <h2 id="summary-title">16 jours au bout du monde</h2>
         </header>
 
         <div id="chapter-grid" class="chapter-grid" aria-label="Chapitres du voyage"></div>
@@ -70,10 +65,12 @@
             </div>
           </div>
 
-          <aside class="summary-note" aria-label="Carnet de voyage">
-            <p class="note-small">12 → 27 juin 2026</p>
-            <p class="note-main">5 îles,<br>16 jours,<br>un seul voyage.</p>
-            <p class="note-detail">Photos, souvenirs et vidéos de notre voyage de noces.</p>
+          <aside id="summary-memory" class="summary-note" aria-label="Souvenir de l’étape sélectionnée" aria-live="polite">
+            <span class="note-rule" aria-hidden="true"></span>
+            <p id="summary-memory-title" class="note-main">Notre voyage</p>
+            <p id="summary-memory-dates" class="note-small" hidden></p>
+            <p id="summary-memory-detail" class="note-detail">Survole une étape pour retrouver nos souvenirs.</p>
+            <a id="summary-memory-link" class="note-link" href="#" hidden></a>
           </aside>
         </div>
       </div>

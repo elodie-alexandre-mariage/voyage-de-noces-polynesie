@@ -1,0 +1,67 @@
+TEXTES DE CHAPITRES VALIDÉS — VOYAGE DE NOCES EN POLYNÉSIE
+17 août 2026
+
+Ces textes sont également enregistrés dans data/voyage.js (champ intro de chaque étape).
+Ils ne sont pas encore affichés sur le site tant que chapitre.html n'a pas été construit.
+
+ALLER — 12 — 13 JUIN
+
+Ce voyage, on en rêvait depuis longtemps. Une fois la décision de nous marier prise, le choix de la destination s’est finalement fait assez simplement : la Polynésie s’est imposée presque comme une évidence. C’était le voyage que l’on imaginait pour notre lune de miel, celui que l’on avait envie de vivre au moins une fois.
+
+Ensuite, il a fallu attendre. Et cette attente nous a paru à la fois très longue… et finalement incroyablement rapide. Pendant des mois, le voyage semblait encore loin, puis tout s’est accéléré jusqu’au jour du départ. Pont-de-l’Isère, Lyon, Paris, Los Angeles… autant d’étapes avant d’atteindre enfin Tahiti.
+
+Le trajet aura été long, parfois même un peu trop, mais l’excitation prenait largement le dessus sur la fatigue. À mesure que les heures passaient, on se rapprochait de ce rêve que l’on avait tant imaginé. Et quand la Polynésie est enfin apparue, on a vraiment eu la sensation que notre voyage de noces commençait pour de bon.
+
+
+MOOREA — 13 — 16 JUIN
+
+À seulement 17 km de Tahiti, Moorea est une île volcanique entourée d’un magnifique lagon, dominée par des montagnes couvertes d’une végétation luxuriante. Surnommée « l’île sœur de Tahiti », elle est notamment connue pour ses baies de Cook et d’Opunohu ainsi que pour ses nombreux champs d’ananas.
+
+À l’intérieur des terres, nous avons découvert plantations, paysages montagneux et anciens marae, témoins de la culture polynésienne. Côté lagon, changement de décor : eaux turquoise, raies pastenagues, requins à pointes noires et petits motu où profiter de ce décor paradisiaque.
+
+Pendant nos trois jours sur l’île, Moorea nous a ainsi offert nos premières grandes découvertes polynésiennes, entre une nature spectaculaire côté terre et une incroyable richesse côté mer.
+
+
+MAUPITI — 16 — 19 JUIN
+
+À une quarantaine de kilomètres de Bora Bora, Maupiti est la plus excentrée des îles que nous avons visitées au cours de notre voyage. Petite île volcanique entourée d’un lagon aux multiples nuances de bleu et de motu bordés de sable blanc, elle nous a immédiatement séduits par son côté sauvage, authentique et encore très peu touristique.
+
+L’aventure commence dès l’arrivée, avec son minuscule aéroport posé sur un motu, puis une traversée en bateau pour rejoindre l’île principale. À vélo, depuis les airs en ULM ou lors de notre randonnée jusqu’au sommet du mont Teurafaatiu, nous avons découvert une île à taille humaine, préservée, avec des vues spectaculaires sur le lagon.
+
+Mais c’est surtout son lagon qui nous aura marqués : raies manta, requins, eaux cristallines et panoramas magnifiques depuis la plage. Notre excursion à la rencontre des raies manta restera d’ailleurs notre sortie préférée de tout le voyage, faisant de Maupiti l’un de nos plus beaux souvenirs de Polynésie.
+
+
+TAHA’A — 19 — 22 JUIN
+
+Surnommée « l’île Vanille », Taha’a est une île volcanique verdoyante qui partage son lagon avec sa voisine Raiatea. Sans aéroport, on la rejoint en bateau depuis cette dernière. Dès notre arrivée, on a aimé son atmosphère paisible et surtout son côté très sauvage, avec par endroits une végétation si dense qu’on avait presque l’impression de traverser la jungle.
+
+On y a découvert une ferme perlière, une vanilleraie et une rhumerie, avec forcément quelques souvenirs à glisser dans les valises. Lors d’une journée sur le lagon, nous avons déjeuné sur un motu avec notre guide, avant de nous laisser porter dans le magnifique jardin de corail, au milieu des poissons multicolores… et avec un courant dont on se souvient encore !
+
+Taha’a nous a aussi réservé des moments auxquels on ne s’attendait pas forcément : goûter à de la coco fraîche, tomber sur la fête de la musique dans une école ou encore dîner autour de plats parfumés à la vanille de l’île. Et puis il y avait simplement le plaisir de prendre la voiture et de partir découvrir Taha’a à notre rythme, sous la pluie, avec la radio locale et ses sons tahitiens en fond, au milieu des petites routes, des plantations et d’une végétation toujours plus luxuriante.
+
+
+BORA BORA — 22 — 25 JUIN
+
+Surnommée « la Perle du Pacifique », Bora Bora est sans doute l’image que l’on se fait tous de la Polynésie : une île volcanique dominée par le mont Otemanu, entourée d’un immense lagon aux nuances de bleu presque irréelles. Et pour une fois, la réalité n’a vraiment rien à envier aux cartes postales : dès notre arrivée à l’aéroport, on a été impressionnés par la beauté du décor.
+
+La ville en elle-même nous a pourtant un peu déçus et nous l’avons trouvée moins charmante que ce que l’on imaginait. Mais dès que l’on revenait à l’hôtel, le contraste était total : on s’y sentait vraiment bien, avec le lagon devant nous et cette impression d’être complètement coupés du reste. Lors de notre excursion, entre snorkeling et jardin de corail, on a découvert ce qui restera pour nous les plus beaux fonds marins de tout notre voyage en Polynésie, avec une eau incroyablement claire, des coraux et une multitude de poissons tropicaux. Cette journée avec notre guide nous a aussi permis d’en apprendre davantage sur la culture polynésienne, ses traditions et son histoire, et de découvrir Bora Bora autrement que par ses paysages de carte postale.
+
+Et puis il y a eu les moments où l’on a simplement profité : un massage, le lagon, l’hôtel… avant de découvrir notre dernière chambre du voyage, un bungalow sur pilotis posé directement sur l’eau. Pouvoir descendre dans le lagon depuis notre terrasse et terminer notre séjour comme ça, c’était exactement l’image du rêve polynésien que l’on avait en tête avant de partir : les pieds dans l’eau.
+
+
+TAHITI — 25 — 26 JUIN
+
+Tahiti aura été la dernière étape de notre voyage, mais certainement celle que nous avons le moins eu le temps de découvrir. Notre chauffeur nous a déposés au marché de Papeete, où l’on a pu se promener un peu et faire quelques derniers achats avant de rejoindre notre hôtel. On sait finalement très peu de choses de l’île elle-même, mais ce qu’on en a aperçu nous a donné l’impression qu’elle mériterait largement plus de temps… une bonne raison de revenir un jour en Polynésie !
+
+Après le marché, direction l’hôtel avec un chauffeur de taxi particulièrement perché qui nous aura bien fait rire sur le trajet. L’hôtel était très agréable et, pour notre dernière soirée, on a simplement profité : un verre en terrasse face au coucher du soleil, histoire de savourer encore quelques instants cette vue sur le Pacifique.
+
+La soirée s’est terminée par un dîner-spectacle polynésien vraiment sympa, une belle façon de clôturer ces deux semaines avant d’aller se coucher assez tôt. Le réveil devait sonner de bonne heure le lendemain pour prendre le chemin du retour. Tahiti n’aura donc été qu’un aperçu, mais peut-être justement assez pour nous donner une nouvelle raison de revenir.
+
+
+RETOUR — 26 — 27 JUIN
+
+Après deux semaines en Polynésie, il fallait bien reprendre le chemin de la maison. Un dernier départ de Tahiti, quelques heures au salon Air France, puis la découverte de la Business Class pour le long vol retour. Autant dire qu’après ces journées bien remplies, on n’a pas mis longtemps à profiter des sièges pour faire un gros dodo et traverser une bonne partie de la planète !
+
+Entre Tahiti, Los Angeles, Paris puis Lyon, le voyage touchait doucement à sa fin. On rentrait forcément un peu tristes de quitter la Polynésie, mais surtout avec des souvenirs plein la tête, des milliers de photos et l’impression d’avoir vécu exactement le voyage de noces dont on rêvait.
+
+Et si ce voyage a pu être aussi exceptionnel, c’est aussi grâce à toutes les personnes qui ont participé à notre cagnotte de mariage. Alors une dernière fois : merci. Merci d’avoir contribué, chacun à votre manière, à nous offrir ces moments que l’on n’oubliera jamais. ❤️

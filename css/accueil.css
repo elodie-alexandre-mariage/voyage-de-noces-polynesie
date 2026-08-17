@@ -28,7 +28,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 58%;
+  object-position: center 64%;
   transform: scale(1.005);
 }
 
@@ -37,8 +37,8 @@
   inset: 0;
   z-index: -2;
   background:
-    radial-gradient(circle at 50% 47%, rgba(244, 250, 251, 0.58) 0%, rgba(244, 250, 251, 0.20) 31%, rgba(244, 250, 251, 0) 58%),
-    linear-gradient(180deg, rgba(0, 73, 118, 0.04) 0%, rgba(0, 73, 118, 0.02) 48%, rgba(0, 73, 118, 0.18) 100%);
+    radial-gradient(circle at 50% 47%, rgba(0, 45, 68, 0.24) 0%, rgba(0, 45, 68, 0.10) 34%, rgba(0, 45, 68, 0) 62%),
+    linear-gradient(180deg, rgba(0, 45, 68, 0.08) 0%, rgba(0, 45, 68, 0.03) 48%, rgba(0, 45, 68, 0.22) 100%);
 }
 
 .cover-content {
@@ -55,7 +55,8 @@
   display: grid;
   justify-items: center;
   gap: 15px;
-  color: var(--blue-deep);
+  color: var(--white);
+  text-shadow: 0 2px 14px rgba(0, 35, 55, 0.30);
 }
 
 .cover-title span {
@@ -78,8 +79,9 @@
 
 .cover-dates {
   margin: 22px 0 0;
-  color: var(--blue-deep);
+  color: var(--white);
   font-size: clamp(14px, 1.15vw, 18px);
+  text-shadow: 0 2px 12px rgba(0, 35, 55, 0.30);
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.18em;
@@ -94,8 +96,9 @@
   gap: 4px;
   justify-items: center;
   transform: translateX(-50%);
-  color: var(--blue-deep);
+  color: var(--white);
   font-size: 10px;
+  text-shadow: 0 2px 10px rgba(0, 35, 55, 0.32);
   font-weight: 600;
   letter-spacing: 0.20em;
   text-decoration: none;
@@ -118,7 +121,9 @@
    ========================================================= */
 
 .summary {
+  height: 100svh;
   min-height: 100svh;
+  overflow: hidden;
   background:
     radial-gradient(circle at 88% 15%, rgba(184, 223, 231, 0.20), transparent 28%),
     linear-gradient(180deg, #fdfcf9 0%, var(--sand-soft) 100%);
@@ -127,7 +132,8 @@
 
 .summary-shell {
   width: min(var(--page-max), calc(100% - 56px));
-  min-height: 100svh;
+  height: 100svh;
+  min-height: 0;
   margin: 0 auto;
   padding: clamp(17px, 2.2vh, 28px) 0 clamp(15px, 2vh, 25px);
   display: grid;
@@ -136,29 +142,23 @@
 }
 
 .summary-heading {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 44px;
+  display: block;
+  text-align: center;
+}
+
+.summary-heading .section-kicker {
+  margin-bottom: 3px;
+  font-size: 11px;
+  letter-spacing: 0.28em;
 }
 
 .summary-heading h2 {
   margin: 0;
   color: var(--blue-deep);
-  font-size: var(--type-title);
+  font-size: clamp(29px, 2.2vw, 38px);
   font-weight: 300;
-  line-height: 1;
-  letter-spacing: -0.035em;
-}
-
-.summary-intro {
-  max-width: 440px;
-  margin: 0 0 2px;
-  color: var(--text-soft);
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.5;
-  text-align: right;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
 }
 
 /* =========================================================
@@ -233,28 +233,31 @@
 }
 
 .chapter-card:hover,
-.chapter-card:focus-visible {
+.chapter-card:focus-visible,
+.chapter-card.is-active {
   z-index: 3;
-  border-color: var(--blue);
+  border-color: rgba(70, 152, 203, 0.86);
   box-shadow: var(--shadow-soft);
-  transform: translateY(-4px) scale(1.014);
+  transform: translateY(-3px) scale(1.015);
 }
 
 .chapter-card:hover img,
-.chapter-card:focus-visible img {
-  transform: scale(1.035);
+.chapter-card:focus-visible img,
+.chapter-card.is-active img {
+  transform: scale(1.03);
 }
 
 .chapter-card:hover .chapter-dates,
-.chapter-card:focus-visible .chapter-dates {
+.chapter-card:focus-visible .chapter-dates,
+.chapter-card.is-active .chapter-dates {
   max-height: 25px;
   margin-top: 6px;
-  opacity: 0.95;
+  opacity: 0.96;
 }
 
-.chapter-grid.has-hover .chapter-card:not(.is-hovered) {
-  opacity: 0.72;
-  transform: scale(0.994);
+.chapter-grid.has-active .chapter-card:not(.is-active) {
+  opacity: 0.82;
+  transform: scale(0.996);
 }
 
 /* =========================================================
@@ -279,7 +282,7 @@
 
 .summary-timeline-area {
   position: relative;
-  padding-top: 48px;
+  padding-top: 58px;
 }
 
 /* Les logos sont volontairement indépendants de la ligne.
@@ -289,15 +292,23 @@
   top: 0;
   right: 0;
   left: 0;
-  height: 42px;
+  height: 52px;
   pointer-events: none;
 }
 
 .summary-island-logo {
   position: absolute;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  appearance: none;
+  font: inherit;
+  cursor: pointer;
+  pointer-events: auto;
   top: 0;
-  width: 42px;
-  height: 38px;
+  width: 56px;
+  height: 50px;
   transform: translateX(-50%);
   transition: transform 180ms ease, opacity 180ms ease;
 }
@@ -317,6 +328,20 @@
 
 .summary-island-logo.is-active {
   transform: translateX(-50%) translateY(-2px) scale(1.08);
+}
+
+.summary-island-logo:hover,
+.summary-island-logo:focus-visible {
+  transform: translateX(-50%) translateY(-2px) scale(1.05);
+  outline: none;
+}
+
+.summary-island-logo:focus-visible::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 1px solid rgba(70, 152, 203, 0.55);
+  border-radius: 8px;
 }
 
 .summary-island-logo.is-active .island-logo-contour {
@@ -367,6 +392,12 @@
 .summary-timeline-date {
   position: relative;
   z-index: 2;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  appearance: none;
+  font-family: inherit;
+  cursor: pointer;
   padding-top: 10px;
   color: var(--blue-deep);
   font-size: 12px;
@@ -404,6 +435,19 @@
   box-shadow: 0 0 0 3px rgba(70, 152, 203, 0.13);
 }
 
+.summary-timeline-date:hover,
+.summary-timeline-date:focus-visible {
+  color: var(--blue);
+  outline: none;
+}
+
+.summary-timeline-date:hover::before,
+.summary-timeline-date:focus-visible::before {
+  border-color: var(--blue);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(70, 152, 203, 0.10);
+}
+
 .summary-timeline-date:first-of-type::before,
 .summary-timeline-date:last-of-type::before {
   border-color: var(--blue-deep);
@@ -411,38 +455,45 @@
 
 /* =========================================================
    BAS DU SOMMAIRE
+   La carte est prioritaire. Sa taille est calculée par la
+   hauteur disponible, puis la fiche utilise l’espace restant.
    ========================================================= */
 
 .summary-bottom {
   min-height: 0;
-  display: grid;
-  grid-template-columns: minmax(340px, 500px) minmax(230px, 1fr);
-  gap: clamp(28px, 4vw, 72px);
+  display: flex;
+  gap: clamp(24px, 3vw, 50px);
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .map-panel {
   min-width: 0;
+  max-width: 100%;
+  height: 100%;
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .map-heading {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 7px;
   color: var(--blue-deep);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.20em;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
 }
 
 .map-frame {
   position: relative;
-  width: min(100%, 430px);
-  margin-inline: auto;
+  flex: 0 0 auto;
   aspect-ratio: 740 / 460;
   overflow: hidden;
   border: 1px solid rgba(184, 223, 231, 0.72);
@@ -454,8 +505,8 @@
 .map-frame img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: opacity 110ms linear;
+  object-fit: contain;
+  transition: opacity 180ms ease;
 }
 
 .map-frame.is-changing img {
@@ -463,36 +514,77 @@
 }
 
 .summary-note {
-  max-width: 405px;
-  padding-left: clamp(0px, 2vw, 20px);
+  flex: 1 1 280px;
+  min-width: 220px;
+  max-width: 390px;
+  padding: 4px 0;
+  align-self: center;
+  transition: opacity 160ms ease, transform 160ms ease;
 }
 
-.note-small {
-  margin: 0 0 8px;
-  color: var(--blue);
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+.summary-note.is-changing {
+  opacity: 0;
+  transform: translateY(3px);
+}
+
+.note-rule {
+  display: block;
+  width: 38px;
+  height: 1px;
+  margin-bottom: 13px;
+  background: var(--blue-soft);
 }
 
 .note-main {
   margin: 0;
   color: var(--blue-deep);
-  font-size: clamp(28px, 2.15vw, 38px);
-  font-weight: 300;
-  line-height: 1.03;
-  letter-spacing: -0.025em;
+  font-size: clamp(21px, 1.65vw, 27px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.note-small {
+  margin: 7px 0 0;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .note-detail {
-  max-width: 340px;
-  margin: 11px 0 0;
+  max-width: 370px;
+  margin: 13px 0 0;
   color: var(--text-soft);
-  font-size: 13px;
+  font-size: clamp(12.5px, 0.9vw, 14px);
   font-weight: 300;
   line-height: 1.55;
+}
+
+.note-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--blue-deep);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.note-link:hover,
+.note-link:focus-visible {
+  color: var(--blue);
+  transform: translateX(3px);
+}
+
+.note-link[hidden],
+.note-small[hidden] {
+  display: none;
 }
 
 /* =========================================================
@@ -514,10 +606,6 @@
     font-size: clamp(31px, 2.6vw, 42px);
   }
 
-  .summary-intro {
-    font-size: 14px;
-  }
-
   .chapter-card {
     aspect-ratio: 1.03 / 1;
   }
@@ -532,28 +620,38 @@
   }
 
   .summary-timeline-area {
-    padding-top: 40px;
+    padding-top: 52px;
   }
 
   .summary-island-logo {
-    width: 36px;
-    height: 32px;
+    width: 50px;
+    height: 44px;
   }
 
   .summary-timeline-date {
     font-size: 11px;
   }
 
-  .map-frame {
-    width: min(100%, 355px);
+  .summary-heading .section-kicker {
+    font-size: 10px;
+  }
+
+  .summary-heading h2 {
+    font-size: clamp(27px, 2.1vw, 34px);
   }
 
   .note-main {
-    font-size: clamp(24px, 1.8vw, 31px);
+    font-size: clamp(20px, 1.5vw, 24px);
   }
 
   .note-detail {
+    margin-top: 10px;
     font-size: 12px;
+    line-height: 1.48;
+  }
+
+  .note-link {
+    margin-top: 11px;
   }
 }
 
@@ -563,10 +661,13 @@
 
 @media (max-width: 1050px) {
   .summary {
+    height: auto;
     min-height: auto;
+    overflow: visible;
   }
 
   .summary-shell {
+    height: auto;
     min-height: auto;
     padding-bottom: 52px;
   }
@@ -589,12 +690,30 @@
   }
 
   .summary-bottom {
+    display: grid;
     grid-template-columns: 1fr;
+    overflow: visible;
+  }
+
+  .map-panel {
+    width: 100%;
+    height: auto;
+  }
+
+  .map-frame {
+    width: min(100%, 740px);
+    height: auto;
+    margin-inline: auto;
+  }
+
+  .map-heading {
+    justify-content: center;
+    text-align: center;
   }
 
   .summary-note {
     max-width: 760px;
-    padding-left: 0;
+    min-width: 0;
   }
 }
 
@@ -633,15 +752,11 @@
 
   .summary-heading {
     display: block;
+    text-align: center;
   }
 
   .summary-heading h2 {
-    font-size: 36px;
-  }
-
-  .summary-intro {
-    margin-top: 13px;
-    text-align: left;
+    font-size: 32px;
   }
 
   .chapter-grid {
@@ -658,7 +773,7 @@
     aspect-ratio: 2 / 0.92;
   }
 
-  .chapter-grid.has-hover .chapter-card:not(.is-hovered) {
+  .chapter-grid.has-active .chapter-card:not(.is-active) {
     opacity: 1;
     transform: none;
   }
@@ -680,6 +795,6 @@
   }
 
   .note-main {
-    font-size: 31px;
+    font-size: 24px;
   }
 }
