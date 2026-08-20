@@ -165,16 +165,33 @@
         const title = button.dataset.youtubeTitle || "Vidéo souvenir";
         if (!id) return;
 
+        const watchUrl = `https://www.youtube.com/watch?v=${encodeURIComponent(id)}`;
+
+        /* YouTube renvoie l'erreur 153 quand une page locale file://
+           tente de charger le lecteur intégré sans origine HTTP.
+           En aperçu local, on ouvre donc directement YouTube.
+           Une fois le site servi en http/https (GitHub Pages compris),
+           la vidéo se lit directement dans la page. */
+        if (window.location.protocol === "file:") {
+          window.open(watchUrl, "_blank", "noopener,noreferrer");
+          return;
+        }
+
         const iframe = document.createElement("iframe");
         iframe.className = "youtube-video-frame";
-        iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1&rel=0`;
+
+        const origin = window.location.origin && window.location.origin !== "null"
+          ? `&origin=${encodeURIComponent(window.location.origin)}`
+          : "";
+
+        iframe.src = `https://www.youtube.com/embed/${encodeURIComponent(id)}?autoplay=1&rel=0&playsinline=1${origin}`;
         iframe.title = title;
         iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
         iframe.allowFullscreen = true;
         iframe.referrerPolicy = "strict-origin-when-cross-origin";
 
         button.replaceWith(iframe);
-      }, { once: true });
+      });
     });
   }
 

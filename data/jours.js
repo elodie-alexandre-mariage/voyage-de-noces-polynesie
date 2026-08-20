@@ -12,7 +12,7 @@
 
 window.JOURNAL_DATA = {
   "meta": {
-    "version": "3.1-editorial-photos-definitif",
+    "version": "3.2-videos-maupiti-corrigees",
     "updated": "2026-08-20",
     "photosReady": true,
     "videosReady": false,
@@ -22,7 +22,8 @@ window.JOURNAL_DATA = {
       "Les photos suivent exactement les bornes fournies, sans réordonner les fichiers.",
       "Le 15 juin, les 5 photos de soirée sont ajoutées à la fin du bloc Safari.",
       "Le 26 et le 27 juin partagent la même page Retour : photos du 26 dans le premier bloc, photos du 27 dans le second.",
-      "Les vidéos YouTube déjà connues restent enregistrées dans les blocs concernés."
+      "Les vidéos YouTube déjà connues restent enregistrées dans les blocs concernés.",
+      "Le 16 juin, les deux vidéos Maupiti sont regroupées dans le bloc ULM."
     ]
   },
   "days": {
@@ -963,16 +964,7 @@ window.JOURNAL_DATA = {
             "last": "26-06-16_0028.jpg",
             "count": 28
           },
-          "videos": [
-            {
-              "platform": "youtube",
-              "id": "EtDB0RPFSL8",
-              "url": "https://youtube.com/shorts/EtDB0RPFSL8",
-              "title": "Arrivée à Maupiti",
-              "format": "short",
-              "position": "after-gallery"
-            }
-          ]
+          "videos": []
         },
         {
           "title": "Maupiti vue du ciel",
@@ -1126,7 +1118,24 @@ window.JOURNAL_DATA = {
             "last": "26-06-16_0062.jpg",
             "count": 34
           },
-          "videos": []
+          "videos": [
+            {
+              "platform": "youtube",
+              "id": "EtDB0RPFSL8",
+              "url": "https://youtube.com/shorts/EtDB0RPFSL8",
+              "title": "Maupiti — ULM",
+              "format": "short",
+              "position": "after-gallery"
+            },
+            {
+              "platform": "youtube",
+              "id": "Aw926aVsdNg",
+              "url": "https://youtu.be/Aw926aVsdNg",
+              "title": "Maupiti — ULM vue du ciel",
+              "format": "video",
+              "position": "after-gallery"
+            }
+          ]
         }
       ],
       "previous": {

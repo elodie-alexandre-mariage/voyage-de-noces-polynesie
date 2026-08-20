@@ -580,3 +580,10 @@ body.album-day .youtube-video-frame{
     font-size:19px;
   }
 }
+
+
+/* V26 — la vignette vidéo reste pleinement utilisable en aperçu local.
+   En file://, le clic ouvre YouTube ; en http/https, lecture intégrée. */
+body.album-day .youtube-video-card{
+  -webkit-tap-highlight-color:transparent;
+}
