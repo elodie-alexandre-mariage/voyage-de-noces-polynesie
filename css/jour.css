@@ -1,0 +1,1173 @@
+*{box-sizing:border-box}
+:root{--deep:#004976;--lagoon:#4698CB;--pale:#B8DFE7;--mist:#F4FAFB;--ink:#24495C;--soft:#6F8B99;--ivory:#FBFAF7}
+html{scroll-behavior:smooth}
+body.day-page{margin:0;font-family:"Montserrat",Arial,sans-serif;color:var(--ink);font-weight:300;background:#fff}
+a{color:inherit;text-decoration:none}
+.day-head{padding:74px 6vw 82px;background:linear-gradient(180deg,#fff,#FBFDFC)}
+.day-head-inner{width:min(1320px,100%);margin:auto;display:grid;grid-template-columns:.78fr 1.22fr;gap:76px;align-items:center}
+.day-kicker{margin:0 0 17px;color:var(--lagoon);font-size:11px;font-weight:600;letter-spacing:.25em;text-transform:uppercase}
+.day-title{margin:0;color:var(--deep);font-size:clamp(44px,5vw,75px);line-height:1.04;font-weight:300;letter-spacing:-.025em}
+.day-route{margin:20px 0 0;color:var(--soft);font-size:13px;line-height:1.8;letter-spacing:.05em}
+.day-hero{min-height:350px;aspect-ratio:1.8/1;border-radius:18px;overflow:hidden;background:var(--mist);box-shadow:0 16px 38px rgba(0,73,118,.08)}
+.day-hero img{width:100%;height:100%;object-fit:cover}
+.photo-placeholder{height:100%;min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;background:linear-gradient(135deg,var(--mist),#fff);border:1px dashed var(--pale);color:#5E8496}
+.photo-placeholder strong{display:block;color:var(--deep);font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px}
+.photo-placeholder span{max-width:520px;font-size:12px;line-height:1.7}
+.sequence{padding:86px 6vw 96px}.sequence:nth-child(even){background:var(--ivory)}
+.sequence-inner{width:min(1320px,100%);margin:auto}
+.sequence-copy{max-width:790px;margin-bottom:38px}
+.sequence h2{margin:0 0 18px;color:var(--deep);font-size:clamp(29px,3vw,43px);font-weight:300;line-height:1.18}
+.sequence p{margin:0 0 14px;font-size:15.5px;line-height:1.85;color:#385C6D}
+.featured-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:32px 0 18px}
+.featured-grid.single{grid-template-columns:1fr}.featured-grid.single .featured.hero{min-height:520px}
+.featured{min-height:290px;border-radius:16px;overflow:hidden;background:#EEF7F9;cursor:pointer}
+.featured.hero{min-height:470px}.featured img{display:block;width:100%;height:100%;object-fit:cover}
+.sequence-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}
+.gallery-photo{aspect-ratio:1/1;border:0;padding:0;border-radius:12px;overflow:hidden;cursor:pointer;background:#EEF7F9}
+.gallery-photo img{display:block;width:100%;height:100%;object-fit:cover}
+.gallery-pending{margin-top:24px;padding:17px 20px;border-left:2px solid var(--pale);color:#7896A4;font-size:11px;line-height:1.7;letter-spacing:.04em}
+.day-nav{padding:64px 6vw;background:var(--mist);border-top:1px solid rgba(184,223,231,.8)}
+.day-nav-inner{width:min(1320px,100%);margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.day-nav-inner.first .next{grid-column:2}.day-nav-inner.last .prev{grid-column:1}
+.nav-card{padding:26px 30px;border:1px solid rgba(184,223,231,.8);border-radius:15px;background:rgba(255,255,255,.72);min-height:118px;display:flex;flex-direction:column;justify-content:center}
+.nav-card.next{text-align:right}.nav-label{font-size:10px;color:var(--lagoon);font-weight:600;letter-spacing:.2em;text-transform:uppercase}.nav-title{margin-top:10px;color:var(--deep);font-size:21px;font-weight:300}
+.epilogue{padding:105px 6vw 110px;background:linear-gradient(135deg,var(--mist),#fff);text-align:center}
+.epilogue-inner{width:min(920px,100%);margin:auto}.epilogue h2{margin:10px 0 26px;color:var(--deep);font-size:clamp(40px,5vw,66px);font-weight:300}
+.epilogue p{font-size:15.5px;line-height:1.9;color:#385C6D}.epilogue-signature{margin-top:34px;color:var(--deep);font-weight:500}
+.epilogue .photo-placeholder{min-height:360px;margin:45px 0;border-radius:18px}.back-home{display:inline-block;margin-top:28px;color:var(--deep);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--pale);padding-bottom:5px}
+.day-lightbox[hidden]{display:none}.day-lightbox{position:fixed;inset:0;z-index:1000;background:rgba(2,20,31,.96);display:flex;align-items:center;justify-content:center;padding:65px 76px 52px}
+.day-lightbox img{max-width:100%;max-height:100%;object-fit:contain}.day-lightbox-close,.day-lightbox-prev,.day-lightbox-next{position:absolute;border:0;background:transparent;color:#fff;cursor:pointer;font-family:Arial,sans-serif;font-size:38px;line-height:1}
+.day-lightbox-close{top:20px;right:26px}.day-lightbox-prev{left:22px;top:50%;transform:translateY(-50%)}.day-lightbox-next{right:22px;top:50%;transform:translateY(-50%)}.day-lightbox-count{position:absolute;bottom:18px;color:#fff;font-size:11px;letter-spacing:.15em}
+@media(max-width:900px){.day-head-inner{grid-template-columns:1fr;gap:38px}.sequence-gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.day-head{padding:52px 22px}.sequence{padding:64px 22px}.featured-grid,.featured-grid.single,.sequence-gallery{grid-template-columns:1fr}.featured.hero,.featured-grid.single .featured.hero{min-height:320px}.day-nav{padding:44px 22px}.day-nav-inner{grid-template-columns:1fr}.day-nav-inner.first .next,.day-nav-inner.last .prev{grid-column:1}.nav-card.next{text-align:left}.day-lightbox{padding:58px 12px 44px}.day-lightbox-prev{left:5px}.day-lightbox-next{right:5px}}
+
+
+/* =========================================================
+   NAVIGATION CONTEXTUELLE — JOURNÉE
+   ========================================================= */
+.day-chapter-return{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin:0 0 25px;
+  padding-bottom:6px;
+  border-bottom:1px solid rgba(70,152,203,.32);
+  color:var(--deep);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  transition:color .18s ease,border-color .18s ease;
+}
+
+.day-chapter-return span:first-child{
+  color:var(--lagoon);
+  font-size:15px;
+  font-weight:400;
+  letter-spacing:0;
+  transition:transform .18s ease;
+}
+
+.day-chapter-return:hover,
+.day-chapter-return:focus-visible{
+  color:var(--lagoon);
+  border-color:var(--lagoon);
+  outline:none;
+}
+
+.day-chapter-return:hover span:first-child,
+.day-chapter-return:focus-visible span:first-child{
+  transform:translateX(-3px);
+}
+
+/* On remplace visuellement l’ancienne navigation 2 colonnes par 3 accès clairs */
+.day-nav{
+  padding:60px 6vw;
+  background:var(--mist);
+  border-top:1px solid rgba(184,223,231,.8);
+}
+
+.day-nav-inner{
+  width:min(1320px,100%);
+  margin:auto;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(220px,.72fr) minmax(0,1fr);
+  gap:18px;
+  align-items:stretch;
+}
+
+.day-nav .nav-card{
+  min-height:128px;
+  padding:24px 26px;
+  border:1px solid rgba(184,223,231,.82);
+  border-radius:15px;
+  background:rgba(255,255,255,.82);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  box-shadow:0 8px 22px rgba(0,73,118,.04);
+  transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease,background .18s ease;
+}
+
+.day-nav .nav-card:hover,
+.day-nav .nav-card:focus-visible{
+  transform:translateY(-3px);
+  border-color:rgba(70,152,203,.62);
+  background:#fff;
+  box-shadow:0 12px 28px rgba(0,73,118,.08);
+  outline:none;
+}
+
+.day-nav .nav-card.prev{text-align:left}
+.day-nav .nav-card.next{text-align:right}
+
+.day-nav .nav-card.chapter{
+  text-align:center;
+  border-color:rgba(70,152,203,.48);
+  background:rgba(255,255,255,.96);
+}
+
+.day-nav .nav-label{
+  color:var(--lagoon);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.16em;
+  line-height:1.45;
+  text-transform:uppercase;
+}
+
+.day-nav .nav-title{
+  margin-top:9px;
+  color:var(--deep);
+  font-size:clamp(17px,1.45vw,21px);
+  font-weight:300;
+  line-height:1.32;
+}
+
+.day-nav .nav-subtitle{
+  margin-top:8px;
+  color:rgba(0,73,118,.55);
+  font-size:9px;
+  font-weight:500;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.day-nav .nav-spacer{
+  min-height:1px;
+}
+
+@media(max-width:820px){
+  .day-nav-inner{
+    grid-template-columns:1fr;
+  }
+
+  .day-nav .nav-spacer{
+    display:none;
+  }
+
+  .day-nav .nav-card.next,
+  .day-nav .nav-card.prev,
+  .day-nav .nav-card.chapter{
+    text-align:left;
+  }
+
+  .day-nav .nav-card.chapter{
+    order:-1;
+  }
+}
+
+@media(max-width:720px){
+  .day-chapter-return{
+    margin-bottom:20px;
+  }
+
+  .day-nav{
+    padding:42px 22px;
+  }
+}
+
+
+/* =========================================================
+   PHOTOS ÉDITORIALES — JOURNÉES
+   Ajouté pour le premier test réel du 12 juin
+   ========================================================= */
+.day-hero[data-lightbox-src],
+.featured[data-lightbox-src]{
+  cursor:zoom-in;
+}
+
+.featured.portrait{
+  min-height:0;
+  aspect-ratio:4 / 5;
+  background:#EEF7F9;
+}
+
+.featured.portrait img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Une seule photo verticale forte : on évite qu’elle prenne toute la largeur */
+.featured-grid.single .featured.portrait{
+  width:min(430px,100%);
+  justify-self:center;
+}
+
+/* Deux verticales côte à côte : format album plutôt que deux grands rectangles */
+.featured-grid:not(.single) .featured.portrait{
+  aspect-ratio:4 / 5;
+}
+
+@media(max-width:720px){
+  .featured-grid.single .featured.portrait{
+    width:min(390px,100%);
+  }
+}
+
+
+/* =========================================================
+   12 JUIN — COMPOSITION ÉDITORIALE V2
+   ========================================================= */
+
+/* Introduction : texte + seconde photo de départ côte à côte */
+.sequence.intro-split{
+  padding-top:64px;
+  padding-bottom:72px;
+}
+
+.sequence.intro-split .sequence-inner{
+  display:grid;
+  grid-template-columns:minmax(0,1.18fr) minmax(280px,.72fr);
+  gap:64px;
+  align-items:center;
+}
+
+.sequence.intro-split .sequence-copy{
+  max-width:760px;
+  margin:0;
+}
+
+.sequence.intro-split .featured-grid{
+  margin:0;
+}
+
+.sequence.intro-split .featured-grid.single{
+  display:block;
+}
+
+.sequence.intro-split .featured-grid.single .featured.portrait{
+  width:min(360px,100%);
+  margin-left:auto;
+  aspect-ratio:4 / 5;
+}
+
+/* Triptyque : 0004, 0005, 0006 sur une seule ligne */
+.featured-grid.triptych{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+  align-items:stretch;
+}
+
+.featured-grid.triptych .featured{
+  width:100%;
+  min-height:0;
+  aspect-ratio:4 / 5;
+}
+
+.featured-grid.triptych .featured img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Le panneau K45 doit rester lisible : cadrage un peu moins agressif */
+.featured-grid.triptych .featured:first-child img{
+  object-position:center center;
+}
+
+/* Sur grand écran, on utilise davantage la largeur disponible */
+@media(min-width:1100px){
+  .featured-grid.triptych{
+    width:min(1080px,100%);
+  }
+}
+
+@media(max-width:900px){
+  .sequence.intro-split .sequence-inner{
+    grid-template-columns:1fr;
+    gap:32px;
+  }
+
+  .sequence.intro-split .featured-grid.single .featured.portrait{
+    width:min(420px,100%);
+    margin:0;
+  }
+
+  .featured-grid.triptych{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+
+@media(max-width:680px){
+  .featured-grid.triptych{
+    grid-template-columns:1fr;
+  }
+
+  .featured-grid.triptych .featured{
+    width:min(390px,100%);
+  }
+}
+
+
+/* =========================================================
+   PAGES JOURNÉE — VERSION PLUS COMPACTE
+   ========================================================= */
+
+/* Moins de hauteur perdue entre les moments de la journée */
+.sequence{
+  padding-top:54px;
+  padding-bottom:58px;
+}
+
+.sequence-copy{
+  margin-bottom:24px;
+}
+
+.featured-grid{
+  margin-top:20px;
+  margin-bottom:10px;
+}
+
+.sequence-gallery{
+  margin-top:12px;
+}
+
+/* Le message technique d'intégration n'a plus lieu d'être */
+.gallery-pending{
+  display:none !important;
+}
+
+/* Introduction du 12 : plus compacte */
+.sequence.intro-split{
+  padding-top:46px;
+  padding-bottom:50px;
+}
+
+.sequence.intro-split .sequence-inner{
+  gap:42px;
+}
+
+.sequence.intro-split .featured-grid.single .featured.portrait{
+  width:min(315px,100%);
+}
+
+/* Texte + une photo : on utilise la largeur de l'écran */
+.sequence.split-featured .sequence-inner{
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(360px,1.1fr);
+  gap:58px;
+  align-items:center;
+}
+
+.sequence.split-featured .sequence-copy{
+  margin:0;
+}
+
+.sequence.split-featured .featured-grid{
+  display:block;
+  margin:0;
+}
+
+.sequence.split-featured .featured.landscape{
+  min-height:0;
+  width:100%;
+  aspect-ratio:4 / 3;
+  border-radius:16px;
+}
+
+.sequence.split-featured .featured.landscape img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Arrivée à Los Angeles : texte à gauche + deux verticales à droite */
+.sequence.split-duo .sequence-inner{
+  display:grid;
+  grid-template-columns:minmax(0,.78fr) minmax(500px,1.22fr);
+  gap:54px;
+  align-items:center;
+}
+
+.sequence.split-duo .sequence-copy{
+  margin:0;
+}
+
+.sequence.split-duo .featured-grid{
+  margin:0;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+}
+
+.sequence.split-duo .featured{
+  min-height:0;
+  aspect-ratio:4 / 5;
+}
+
+/* Triptyque Paris -> Los Angeles : légèrement moins haut */
+.featured-grid.triptych{
+  width:min(1020px,100%);
+  gap:14px;
+}
+
+.featured-grid.triptych .featured{
+  aspect-ratio:4 / 5;
+}
+
+/* Évite l'impression d'une colonne perdue quand le texte est court */
+.sequence.compact-sequence .sequence-inner{
+  position:relative;
+}
+
+/* Responsive */
+@media(max-width:1000px){
+  .sequence.split-featured .sequence-inner,
+  .sequence.split-duo .sequence-inner{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .sequence.split-featured .featured-grid,
+  .sequence.split-duo .featured-grid{
+    width:min(720px,100%);
+  }
+
+  .sequence.split-duo .featured-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:680px){
+  .sequence{
+    padding-top:42px;
+    padding-bottom:46px;
+  }
+
+  .sequence.split-duo .featured-grid{
+    grid-template-columns:1fr;
+  }
+
+  .sequence.split-duo .featured{
+    width:min(390px,100%);
+  }
+}
+
+
+/* =========================================================
+   MISE EN PAGE RICHE — JOURNÉES AVEC PLUSIEURS MOMENTS
+   Première utilisation : 13 juin
+   ========================================================= */
+
+/* Texte à gauche + 3 images à droite */
+.sequence.split-triptych .sequence-inner{
+  display:grid;
+  grid-template-columns:minmax(0,.78fr) minmax(620px,1.22fr);
+  gap:54px;
+  align-items:center;
+}
+
+.sequence.split-triptych .sequence-copy{
+  margin:0;
+}
+
+.sequence.split-triptych .featured-grid{
+  margin:0;
+  width:100%;
+}
+
+.featured-grid.triptych-landscape{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+}
+
+.featured-grid.triptych-landscape .featured{
+  min-height:0;
+  aspect-ratio:4 / 3;
+}
+
+.featured-grid.triptych-landscape .featured img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.featured-grid.triptych-portrait{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+}
+
+.featured-grid.triptych-portrait .featured{
+  min-height:0;
+  aspect-ratio:3 / 4;
+}
+
+.featured-grid.triptych-portrait .featured img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Bloc textuel court — évite de fabriquer une demi-page vide */
+.sequence.text-note{
+  padding-top:34px;
+  padding-bottom:36px;
+  background:#F4FAFB;
+}
+
+.sequence.text-note .sequence-inner{
+  width:min(980px,100%);
+}
+
+.sequence.text-note .sequence-copy{
+  max-width:900px;
+  margin:0;
+  padding-left:24px;
+  border-left:2px solid #B8DFE7;
+}
+
+.sequence.text-note h2{
+  font-size:clamp(25px,2.3vw,34px);
+  margin-bottom:14px;
+}
+
+/* Texte à gauche + 2 paysages à droite */
+.sequence.split-pair .sequence-inner{
+  display:grid;
+  grid-template-columns:minmax(0,.78fr) minmax(560px,1.22fr);
+  gap:54px;
+  align-items:center;
+}
+
+.sequence.split-pair .sequence-copy{
+  margin:0;
+}
+
+.sequence.split-pair .featured-grid{
+  margin:0;
+}
+
+.featured-grid.pair-landscape{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+
+.featured-grid.pair-landscape .featured{
+  min-height:0;
+  aspect-ratio:4 / 3;
+}
+
+.featured-grid.pair-landscape .featured img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Une séquence peut contenir plusieurs sous-moments sans devenir 3 sections */
+.sequence.blocks .sequence-copy{
+  margin-bottom:34px;
+}
+
+.sequence-blocks{
+  display:flex;
+  flex-direction:column;
+  gap:42px;
+}
+
+.sequence-block{
+  padding-top:32px;
+  border-top:1px solid rgba(184,223,231,.62);
+}
+
+.sequence-block:first-child{
+  padding-top:0;
+  border-top:0;
+}
+
+.sequence-block-copy{
+  max-width:760px;
+  margin-bottom:20px;
+}
+
+.sequence-block-copy h3{
+  margin:0 0 12px;
+  color:#004976;
+  font-size:clamp(20px,1.8vw,27px);
+  font-weight:300;
+  line-height:1.25;
+}
+
+.sequence-block-copy p{
+  margin:0 0 12px;
+  color:#385C6D;
+  font-size:15px;
+  line-height:1.8;
+}
+
+/* Hôtel : texte + duo sans prendre une page entière */
+.sequence-block.block-pair{
+  display:grid;
+  grid-template-columns:minmax(0,.72fr) minmax(480px,1.28fr);
+  gap:46px;
+  align-items:center;
+}
+
+.sequence-block.block-pair .sequence-block-copy{
+  margin:0;
+}
+
+.sequence-block.block-pair .featured-grid{
+  margin:0;
+  grid-template-columns:1.35fr .65fr;
+  gap:12px;
+}
+
+.sequence-block.block-pair .featured{
+  min-height:0;
+  height:310px;
+}
+
+.sequence-block.block-pair .featured img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Grande respiration photo, mais sans hauteur excessive */
+.sequence-block.block-wide .featured-grid{
+  margin:18px 0 0;
+  display:block;
+}
+
+.sequence-block.block-wide .featured.wide{
+  min-height:0;
+  height:360px;
+}
+
+.sequence-block.block-wide .featured.wide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* 6 photos du repas : vraie mosaïque compacte */
+.sequence-block.block-gallery-six .sequence-gallery{
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:10px;
+  margin-top:18px;
+}
+
+.sequence-block.block-gallery-six .gallery-photo{
+  aspect-ratio:4 / 5;
+  border-radius:10px;
+}
+
+/* Responsive */
+@media(max-width:1150px){
+  .sequence.split-triptych .sequence-inner,
+  .sequence.split-pair .sequence-inner{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+
+  .sequence.split-triptych .featured-grid,
+  .sequence.split-pair .featured-grid{
+    width:min(900px,100%);
+  }
+
+  .sequence-block.block-pair{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  .sequence-block.block-pair .featured-grid{
+    width:min(760px,100%);
+  }
+
+  .sequence-block.block-gallery-six .sequence-gallery{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+
+@media(max-width:720px){
+  .featured-grid.triptych-landscape,
+  .featured-grid.triptych-portrait{
+    grid-template-columns:1fr;
+  }
+
+  .featured-grid.triptych-landscape .featured,
+  .featured-grid.triptych-portrait .featured{
+    width:min(420px,100%);
+  }
+
+  .featured-grid.pair-landscape{
+    grid-template-columns:1fr;
+  }
+
+  .sequence-block.block-pair .featured-grid{
+    grid-template-columns:1fr;
+  }
+
+  .sequence-block.block-pair .featured{
+    height:auto;
+    aspect-ratio:4 / 3;
+  }
+
+  .sequence-block.block-wide .featured.wide{
+    height:280px;
+  }
+
+  .sequence-block.block-gallery-six .sequence-gallery{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+
+/* =========================================================
+   FORMAT NATUREL DES PHOTOS
+   Portrait = portrait, paysage = paysage.
+   Pas de recadrage forcé.
+   ========================================================= */
+
+.featured.natural{
+  min-height:0 !important;
+  height:auto !important;
+  aspect-ratio:auto !important;
+  background:transparent;
+}
+
+.featured.natural img{
+  display:block;
+  width:100%;
+  height:auto !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  border-radius:16px;
+}
+
+/* Direction le port : 3 portraits réellement verticaux */
+.featured-grid.triptych-portrait{
+  align-items:start;
+}
+
+.featured-grid.triptych-portrait .featured.natural{
+  aspect-ratio:auto !important;
+}
+
+.featured-grid.triptych-portrait .featured.natural img{
+  aspect-ratio:auto !important;
+}
+
+/* Moorea : 2 paysages sans coupe */
+.featured-grid.pair-landscape{
+  align-items:start;
+}
+
+.featured-grid.pair-landscape .featured.natural{
+  aspect-ratio:auto !important;
+}
+
+.featured-grid.pair-landscape .featured.natural img{
+  aspect-ratio:auto !important;
+}
+
+/* Chambre : 0010 paysage + 0011 portrait */
+.sequence-block.block-pair .featured-grid{
+  align-items:start;
+}
+
+.sequence-block.block-pair .featured.natural{
+  height:auto !important;
+}
+
+.sequence-block.block-pair .featured.natural img{
+  height:auto !important;
+  object-fit:contain !important;
+}
+
+/* Plage : affichage complet, plus de découpe haute/basse */
+.sequence-block.block-wide .featured.wide.natural{
+  height:auto !important;
+}
+
+.sequence-block.block-wide .featured.wide.natural img{
+  width:100%;
+  height:auto !important;
+  object-fit:contain !important;
+}
+
+/* Galerie dîner : chaque photo garde son vrai ratio */
+.sequence-block.block-gallery-six .sequence-gallery{
+  align-items:start;
+}
+
+.sequence-block.block-gallery-six .gallery-photo{
+  aspect-ratio:auto !important;
+  height:auto;
+  background:transparent;
+  align-self:start;
+}
+
+.sequence-block.block-gallery-six .gallery-photo img{
+  display:block;
+  width:100%;
+  height:auto !important;
+  object-fit:contain !important;
+  border-radius:10px;
+}
+
+/* Les portraits restent visuellement plus étroits si nécessaire */
+.sequence-block.block-gallery-six .gallery-photo.portrait{
+  aspect-ratio:auto !important;
+}
+
+.sequence-block.block-gallery-six .gallery-photo.landscape{
+  aspect-ratio:auto !important;
+}
+
+/* Sur desktop, mosaïque plus équilibrée pour le repas */
+@media(min-width:1100px){
+  .sequence-block.block-gallery-six .sequence-gallery{
+    grid-template-columns:repeat(6,minmax(0,1fr));
+  }
+}
+
+@media(max-width:1099px){
+  .sequence-block.block-gallery-six .sequence-gallery{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+
+@media(max-width:680px){
+  .sequence-block.block-gallery-six .sequence-gallery{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+
+/* =========================================================
+   13 JUIN — COHÉRENCE VISUELLE V4
+   - tailles plus homogènes
+   - photo de plage moins envahissante
+   - blocs plus éditoriaux et moins “amateurs”
+   ========================================================= */
+
+.sequence.compact-sequence{
+  padding-top:70px;
+  padding-bottom:76px;
+}
+
+.sequence.split-pair .featured-grid.pair-landscape{
+  width:min(780px,100%);
+  margin-left:auto;
+}
+
+.sequence.split-pair .featured-grid.pair-landscape .featured.natural{
+  background:#fff;
+}
+
+.sequence.split-pair .featured-grid.pair-landscape .featured.natural img{
+  border-radius:16px;
+  box-shadow:0 10px 26px rgba(0,73,118,.06);
+}
+
+.sequence-block.block-pair .featured-grid{
+  width:min(760px,100%);
+}
+
+.sequence-block.block-wide .featured-grid{
+  width:min(980px,100%);
+  margin:22px auto 0;
+}
+
+.sequence-block.block-wide .featured.wide.natural{
+  width:min(980px,100%);
+  margin:0 auto;
+}
+
+.sequence-block.block-wide .featured.wide.natural img{
+  display:block;
+  width:min(980px,100%);
+  margin:0 auto;
+  border-radius:18px;
+  box-shadow:0 14px 34px rgba(0,73,118,.07);
+}
+
+.sequence-block.block-gallery-six .sequence-gallery{
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:12px;
+}
+
+.sequence-block.block-gallery-six .gallery-photo{
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+}
+
+.sequence-block.block-gallery-six .gallery-photo img{
+  width:100%;
+  max-height:390px;
+  object-fit:cover !important;
+  object-position:center center !important;
+  box-shadow:0 8px 20px rgba(0,73,118,.05);
+}
+
+.sequence-block.block-gallery-six .gallery-photo.landscape img{
+  max-height:250px;
+  object-fit:cover !important;
+}
+
+.sequence-block.block-gallery-six .gallery-photo.portrait img{
+  max-height:390px;
+}
+
+@media(max-width:1180px){
+  .sequence-block.block-wide .featured-grid,
+  .sequence-block.block-wide .featured.wide.natural,
+  .sequence-block.block-wide .featured.wide.natural img{
+    width:min(860px,100%);
+  }
+
+  .sequence-block.block-gallery-six .sequence-gallery{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+
+  .sequence-block.block-gallery-six .gallery-photo img{
+    max-height:360px;
+  }
+}
+
+@media(max-width:820px){
+  .sequence.compact-sequence{
+    padding-top:56px;
+    padding-bottom:60px;
+  }
+
+  .sequence.split-pair .featured-grid.pair-landscape{
+    width:min(640px,100%);
+    margin-left:0;
+  }
+
+  .sequence-block.block-wide .featured-grid,
+  .sequence-block.block-wide .featured.wide.natural,
+  .sequence-block.block-wide .featured.wide.natural img{
+    width:100%;
+  }
+}
+
+@media(max-width:680px){
+  .sequence-block.block-gallery-six .sequence-gallery{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .sequence-block.block-gallery-six .gallery-photo img,
+  .sequence-block.block-gallery-six .gallery-photo.portrait img,
+  .sequence-block.block-gallery-six .gallery-photo.landscape img{
+    max-height:none;
+    object-fit:contain !important;
+  }
+
+  .sequence-block.block-wide .featured.wide.natural img{
+    box-shadow:none;
+  }
+}
+
+
+/* =========================================================
+   DIRECTION VISUELLE PREMIUM — V5
+   Principe :
+   - photo prioritaire mais jamais disproportionnée
+   - portrait = portrait
+   - paysage = paysage
+   - grands visuels uniquement quand la photo le justifie
+   ========================================================= */
+
+/* Sous-blocs : rythme plus précis */
+.sequence-blocks{
+  gap:48px;
+}
+
+.sequence-block{
+  padding-top:38px;
+}
+
+.sequence-block-copy{
+  max-width:700px;
+}
+
+/* ---------------------------------------------------------
+   PLAGE : composition texte + image, et non bannière géante
+   --------------------------------------------------------- */
+.sequence-block.block-photo-text{
+  display:grid;
+  grid-template-columns:minmax(260px,.58fr) minmax(520px,1.12fr);
+  gap:54px;
+  align-items:center;
+}
+
+.sequence-block.block-photo-text .sequence-block-copy{
+  margin:0;
+  max-width:470px;
+}
+
+.sequence-block.block-photo-text .featured-grid{
+  display:block;
+  width:100%;
+  max-width:720px;
+  margin:0 0 0 auto;
+}
+
+.sequence-block.block-photo-text .featured{
+  width:100%;
+  min-height:0 !important;
+  height:auto !important;
+  background:transparent;
+  border-radius:16px;
+  overflow:hidden;
+}
+
+/* La photo reste paysage mais on retire une partie du ciel inutile.
+   On privilégie volontairement le bas de l'image. */
+.sequence-block.block-photo-text .featured.crop-beach img{
+  display:block;
+  width:100%;
+  aspect-ratio:16 / 10;
+  height:auto;
+  object-fit:cover !important;
+  object-position:center 72% !important;
+  border-radius:16px;
+  box-shadow:0 12px 28px rgba(0,73,118,.07);
+}
+
+/* ---------------------------------------------------------
+   HÔTEL : présence élégante, sans visuels surdimensionnés
+   --------------------------------------------------------- */
+.sequence-block.block-pair{
+  grid-template-columns:minmax(270px,.62fr) minmax(520px,1.18fr);
+  gap:52px;
+}
+
+.sequence-block.block-pair .sequence-block-copy{
+  max-width:430px;
+}
+
+.sequence-block.block-pair .featured-grid{
+  width:min(720px,100%);
+  margin-left:auto;
+}
+
+/* ---------------------------------------------------------
+   DÎNER : 6 portraits réguliers, visibles en entier
+   --------------------------------------------------------- */
+.sequence-block.block-gallery-premium .sequence-block-copy{
+  max-width:820px;
+}
+
+.sequence-block.block-gallery-premium .sequence-gallery{
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:12px;
+  width:100%;
+  margin-top:24px;
+  align-items:start;
+}
+
+.sequence-block.block-gallery-premium .gallery-photo{
+  width:100%;
+  height:auto;
+  aspect-ratio:auto !important;
+  padding:0;
+  border:0;
+  border-radius:12px;
+  overflow:hidden;
+  background:transparent;
+  cursor:zoom-in;
+}
+
+.sequence-block.block-gallery-premium .gallery-photo img{
+  display:block;
+  width:100%;
+  height:auto !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,73,118,.045);
+}
+
+/* ---------------------------------------------------------
+   CAP SUR MOOREA : deux paysages présents, mais contenus
+   --------------------------------------------------------- */
+.sequence.split-pair .featured-grid.pair-landscape{
+  width:min(760px,100%);
+  margin-left:auto;
+}
+
+.sequence.split-pair .featured-grid.pair-landscape .featured.natural img{
+  box-shadow:0 9px 22px rgba(0,73,118,.05);
+}
+
+/* ---------------------------------------------------------
+   Règle générale de proportion sur desktop
+   --------------------------------------------------------- */
+@media(min-width:1200px){
+  .day-head-inner,
+  .sequence-inner,
+  .day-nav-inner{
+    width:min(1360px,100%);
+  }
+
+  .sequence{
+    padding-left:6vw;
+    padding-right:6vw;
+  }
+}
+
+@media(max-width:1150px){
+  .sequence-block.block-photo-text,
+  .sequence-block.block-pair{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+
+  .sequence-block.block-photo-text .sequence-block-copy,
+  .sequence-block.block-pair .sequence-block-copy{
+    max-width:760px;
+  }
+
+  .sequence-block.block-photo-text .featured-grid,
+  .sequence-block.block-pair .featured-grid{
+    width:min(760px,100%);
+    margin-left:0;
+  }
+
+  .sequence-block.block-gallery-premium .sequence-gallery{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:14px;
+  }
+}
+
+@media(max-width:720px){
+  .sequence-block.block-photo-text .featured.crop-beach img{
+    aspect-ratio:auto;
+    object-fit:contain !important;
+    object-position:center !important;
+    box-shadow:none;
+  }
+
+  .sequence-block.block-gallery-premium .sequence-gallery{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}

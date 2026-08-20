@@ -1,0 +1,582 @@
+/* =========================================================
+   GALERIE DES PAGES JOURNÉE — STYLE SITE MARIAGE
+   Référence commune à partir de la V16
+
+   Toutes les journées utilisent désormais :
+   - texte au-dessus des photos ;
+   - grille 4 colonnes desktop ;
+   - vignettes carrées ;
+   - gap 11 px ;
+   - object-fit: cover dans la vignette ;
+   - photo complète dans la lightbox ;
+   - ordre défini par les données, sans réorganisation visuelle.
+   ========================================================= */
+
+/* ---------- EN-TÊTE DES JOURNÉES ---------- */
+body.album-day .day-head{
+  padding:56px 6vw 42px;
+  background:linear-gradient(180deg,#fff,#FCFEFF);
+}
+
+body.album-day .day-head-inner{
+  width:min(1400px,100%);
+  margin:auto;
+  display:block !important;
+}
+
+body.album-day .day-kicker{margin:0 0 14px}
+body.album-day .day-title{font-size:clamp(40px,5vw,70px);max-width:none}
+body.album-day .day-route{margin-top:14px}
+
+/* Le hero n'est plus automatique sur les pages journée.
+   Il reste possible d'en réactiver un explicitement dans les données avec useHero:true. */
+body.album-day .day-hero{
+  margin-top:30px;
+}
+
+/* ---------- RYTHME ÉDITORIAL COMMUN ---------- */
+body.album-day .sequence,
+body.album-day .sequence.album-section{
+  padding:56px 6vw 62px;
+  background:#fff !important;
+}
+
+body.album-day .sequence + .sequence{
+  border-top:1px solid rgba(184,223,231,.65);
+}
+
+/* Neutralise les anciennes compositions split/duo/triptyque des versions précédentes. */
+body.album-day .sequence .sequence-inner{
+  width:min(1400px,100%) !important;
+  margin:auto !important;
+  display:block !important;
+  grid-template-columns:none !important;
+}
+
+body.album-day .sequence-copy,
+body.album-day .sequence-block-copy{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 0 24px !important;
+  padding-left:0 !important;
+  border-left:0 !important;
+}
+
+body.album-day .sequence h2{
+  margin:0 0 14px;
+  color:var(--deep);
+  font-size:clamp(32px,3.4vw,48px);
+  font-weight:300;
+  line-height:1.18;
+}
+
+body.album-day .sequence p,
+body.album-day .sequence-block p{
+  max-width:none;
+  margin:0 0 14px;
+  color:#385C6D;
+  font-size:16px;
+  line-height:1.75;
+}
+
+/* Les anciennes grilles ne sont plus produites par le moteur V16,
+   mais on les neutralise pour éviter une régression si un ancien bloc subsiste. */
+body.album-day .featured-grid,
+body.album-day .sequence-gallery{
+  display:none !important;
+}
+
+/* ---------- GALERIE : MÉCANIQUE DU SITE MARIAGE ---------- */
+body.album-day .album-mosaic{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:11px;
+  width:100%;
+  max-width:1400px;
+  margin:0 auto;
+}
+
+body.album-day .album-photo{
+  position:relative;
+  display:block;
+  width:100%;
+  aspect-ratio:1 / 1;
+  overflow:hidden;
+  padding:0;
+  margin:0;
+  border:0;
+  border-radius:3px;
+  background:#eef4f5;
+  cursor:pointer !important;
+  content-visibility:auto;
+  contain-intrinsic-size:280px 280px;
+}
+
+body.album-day .album-photo::after{
+  position:absolute;
+  inset:0;
+  border:1px solid rgba(255,255,255,.26);
+  content:"";
+  pointer-events:none;
+}
+
+body.album-day .album-photo img{
+  display:block;
+  width:100%;
+  height:100%;
+  aspect-ratio:1 / 1;
+  object-fit:cover;
+  object-position:center;
+  filter:saturate(.94) contrast(.99);
+  backface-visibility:hidden;
+  transform:translateZ(0);
+  transition:transform .65s ease,filter .45s ease;
+  will-change:transform,filter;
+}
+
+body.album-day .album-photo:hover img{
+  filter:saturate(1.03) contrast(1.01);
+  transform:translateZ(0) scale(1.045);
+}
+
+body.album-day .album-photo:focus-visible{
+  outline:2px solid var(--lagoon);
+  outline-offset:4px;
+}
+
+/* ---------- SOUS-MOMENTS ---------- */
+body.album-day .sequence-blocks{
+  margin-top:30px;
+  display:block !important;
+}
+
+body.album-day .sequence-block{
+  display:block !important;
+  margin-top:38px !important;
+  padding-top:34px !important;
+  border-top:1px solid rgba(184,223,231,.55) !important;
+  grid-template-columns:none !important;
+}
+
+body.album-day .sequence-block:first-child{
+  margin-top:0 !important;
+}
+
+body.album-day .sequence-block h3{
+  margin:0 0 14px;
+  color:var(--deep);
+  font-size:clamp(26px,2.8vw,40px);
+  font-weight:300;
+  line-height:1.22;
+}
+
+/* ---------- LIGHTBOX ---------- */
+body.album-day .day-lightbox img{
+  object-fit:contain !important;
+}
+
+body.album-day a,
+body.album-day button,
+body.album-day [data-lightbox-src]{
+  cursor:pointer !important;
+}
+
+body.album-day .day-nav{padding:48px 6vw}
+body.album-day .day-nav-inner{width:min(1400px,100%)}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:1020px){
+  body.album-day .album-mosaic{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+
+@media(max-width:720px){
+  body.album-day .day-head{padding:40px 22px 28px}
+  body.album-day .sequence,
+  body.album-day .sequence.album-section{padding:44px 22px 48px}
+
+  body.album-day .album-mosaic{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:7px;
+  }
+}
+
+/* =========================================================
+   V18 — GRAND TITRE DE JOURNÉE UNIQUEMENT
+   Seul le H1 en haut de chaque page journée est centré.
+   Date/chapitre, trajet, titres de moments et sous-moments
+   conservent leur alignement à gauche.
+   ========================================================= */
+
+body.album-day .day-title{
+  width:100%;
+  text-align:center;
+}
+
+body.album-day .day-kicker,
+body.album-day .day-route,
+body.album-day .sequence h2,
+body.album-day .sequence-block h3,
+body.album-day .day-chapter-return{
+  text-align:left;
+}
+
+/* =========================================================
+   V19 — BLOC D’EN-TÊTE CENTRÉ
+   Centrage uniquement du bloc éditorial en haut de la page :
+   - chapitre + date ;
+   - grand titre ;
+   - trajet.
+   Les titres des moments et sous-moments restent à gauche.
+   La navigation de retour au chapitre reste à gauche.
+   ========================================================= */
+
+body.album-day .day-kicker,
+body.album-day .day-title,
+body.album-day .day-route{
+  width:100%;
+  text-align:center !important;
+}
+
+body.album-day .sequence h2,
+body.album-day .sequence-block h3,
+body.album-day .day-chapter-return{
+  text-align:left !important;
+}
+
+
+/* =========================================================
+   V20 — TEXTE DES JOURNÉES ALIGNÉ SUR LES PAGES ÎLE
+   Référence typographique reprise de chapitre.css :
+   - 15.5 px
+   - line-height 1.82
+   - 18 px entre les paragraphes
+   - couleur #24495C
+
+   Le texte des moments et sous-moments utilise désormais toute
+   la largeur utile de la page, sans colonne étroite à gauche.
+   ========================================================= */
+
+/* Même largeur utile que les pages chapitre/île */
+body.album-day .sequence .sequence-inner,
+body.album-day .sequence.album-section .sequence-inner{
+  width:min(1450px,100%) !important;
+}
+
+/* Le bloc texte occupe toute la largeur disponible */
+body.album-day .sequence-copy,
+body.album-day .sequence-block-copy{
+  width:100% !important;
+  max-width:none !important;
+}
+
+/* Typographie identique au texte de présentation des pages île */
+body.album-day .sequence-copy p,
+body.album-day .sequence-block-copy p,
+body.album-day .sequence p,
+body.album-day .sequence-block p{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 0 18px !important;
+  color:#24495C !important;
+  font-size:15.5px !important;
+  font-weight:300;
+  line-height:1.82 !important;
+}
+
+/* Comme sur les pages île : pas de marge inutile après le dernier paragraphe */
+body.album-day .sequence-copy p:last-child,
+body.album-day .sequence-block-copy p:last-child{
+  margin-bottom:0 !important;
+}
+
+/* On garde un espace net entre le texte et la galerie */
+body.album-day .sequence-copy{
+  margin-bottom:28px !important;
+}
+
+body.album-day .sequence-block-copy{
+  margin-bottom:24px !important;
+}
+
+/* La galerie suit la même largeur utile que le contenu */
+body.album-day .album-mosaic{
+  max-width:1450px;
+}
+
+
+/* =========================================================
+   V21 — PHOTOS DES JOURNÉES = STYLE DES VIGNETTES PAGES ÎLE
+
+   Reprise exacte des principes visuels des cartes "Nos jours à..."
+   des pages chapitre, mais SANS la partie blanche de texte :
+   - grille max 1500 px ;
+   - 4 colonnes desktop ;
+   - gap 18 px ;
+   - format image 1.2 / 1 ;
+   - arrondi 17 px ;
+   - bordure et ombre légère ;
+   - petit déplacement vers le haut au survol ;
+   - zoom image 1.025 en 400 ms.
+   ========================================================= */
+
+body.album-day .album-mosaic{
+  width:min(1500px,100%) !important;
+  max-width:none !important;
+  margin:0 auto;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:18px !important;
+}
+
+body.album-day .album-photo{
+  position:relative;
+  width:100%;
+  aspect-ratio:1.2 / 1 !important;
+  overflow:hidden;
+  padding:0;
+  margin:0;
+  border:1px solid rgba(184,223,231,.62) !important;
+  border-radius:17px !important;
+  background:#F4FAFB !important;
+  box-shadow:0 9px 26px rgba(0,73,118,.07);
+  cursor:pointer !important;
+  transition:transform 220ms ease, box-shadow 220ms ease;
+  content-visibility:auto;
+  contain-intrinsic-size:360px 300px;
+}
+
+body.album-day .album-photo::after{
+  display:none !important;
+}
+
+body.album-day .album-photo img{
+  display:block;
+  width:100%;
+  height:100%;
+  aspect-ratio:auto !important;
+  object-fit:cover;
+  object-position:center;
+  border-radius:0;
+  filter:none !important;
+  backface-visibility:hidden;
+  transform:translateZ(0) scale(1);
+  transition:transform 400ms ease !important;
+  will-change:transform;
+}
+
+body.album-day .album-photo:hover,
+body.album-day .album-photo:focus-visible{
+  transform:translateY(-4px);
+  box-shadow:0 15px 34px rgba(0,73,118,.11);
+}
+
+body.album-day .album-photo:hover img,
+body.album-day .album-photo:focus-visible img{
+  transform:translateZ(0) scale(1.025);
+}
+
+body.album-day .album-photo:focus-visible{
+  outline:2px solid var(--lagoon);
+  outline-offset:4px;
+}
+
+/* Même comportement responsive que les vignettes des pages île */
+@media(max-width:1050px){
+  body.album-day .album-mosaic{
+    width:min(850px,100%) !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}
+
+@media(max-width:720px){
+  body.album-day .album-mosaic{
+    width:min(480px,100%) !important;
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+  }
+}
+
+
+/* =========================================================
+   V22 — STYLE V21 CONSERVÉ, TAILLE DE LA V20 RÉTABLIE
+   ========================================================= */
+
+/* On garde le style des vignettes des pages île
+   (ratio, arrondi, bordure, ombre, survol),
+   mais on retrouve la largeur et l'espacement
+   de la mosaïque précédente. */
+body.album-day .album-mosaic{
+  width:100% !important;
+  max-width:1400px !important;
+  gap:11px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+
+/* =========================================================
+   V25 — VIDÉOS YOUTUBE INTÉGRÉES AU RÉCIT
+   Vignette personnalisée, chargement du lecteur uniquement
+   au clic. Les Shorts restent verticaux, les vidéos classiques
+   restent en 16:9.
+   ========================================================= */
+
+body.album-day .youtube-videos{
+  width:100%;
+  margin:30px 0 4px;
+  display:grid;
+  gap:18px;
+}
+
+body.album-day .youtube-video{
+  width:100%;
+}
+
+body.album-day .youtube-video.is-landscape{
+  max-width:980px;
+  margin:0 auto;
+}
+
+body.album-day .youtube-video.is-short{
+  max-width:360px;
+  margin:0 auto;
+}
+
+body.album-day .youtube-video-card,
+body.album-day .youtube-video-frame{
+  display:block;
+  width:100%;
+  border:0;
+  border-radius:17px;
+  overflow:hidden;
+  background:#004976;
+  box-shadow:0 11px 30px rgba(0,73,118,.11);
+}
+
+body.album-day .youtube-video-card{
+  position:relative;
+  padding:0;
+  cursor:pointer;
+  text-align:left;
+  isolation:isolate;
+  transition:transform 220ms ease, box-shadow 220ms ease;
+}
+
+body.album-day .youtube-video.is-landscape .youtube-video-card,
+body.album-day .youtube-video.is-landscape .youtube-video-frame{
+  aspect-ratio:16 / 9;
+}
+
+body.album-day .youtube-video.is-short .youtube-video-card,
+body.album-day .youtube-video.is-short .youtube-video-frame{
+  aspect-ratio:9 / 16;
+}
+
+body.album-day .youtube-video-card img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transform:scale(1.001);
+  transition:transform 420ms ease;
+}
+
+body.album-day .youtube-video-shade{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:
+    linear-gradient(to top, rgba(0,37,61,.78) 0%, rgba(0,37,61,.12) 48%, rgba(0,37,61,.10) 100%);
+}
+
+body.album-day .youtube-video-kicker{
+  position:absolute;
+  z-index:2;
+  top:18px;
+  left:20px;
+  color:#fff;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.22em;
+}
+
+body.album-day .youtube-video-title{
+  position:absolute;
+  z-index:2;
+  left:22px;
+  right:22px;
+  bottom:20px;
+  color:#fff;
+  font-size:clamp(17px,2vw,23px);
+  font-weight:400;
+  line-height:1.25;
+  text-shadow:0 2px 12px rgba(0,0,0,.24);
+}
+
+body.album-day .youtube-video-play{
+  position:absolute;
+  z-index:3;
+  top:50%;
+  left:50%;
+  display:grid;
+  width:68px;
+  height:68px;
+  place-items:center;
+  border:1px solid rgba(255,255,255,.72);
+  border-radius:50%;
+  background:rgba(255,255,255,.90);
+  color:#004976;
+  font-size:22px;
+  padding-left:4px;
+  transform:translate(-50%,-50%);
+  box-shadow:0 10px 28px rgba(0,37,61,.22);
+  transition:transform 220ms ease, background 220ms ease;
+}
+
+body.album-day .youtube-video-card:hover,
+body.album-day .youtube-video-card:focus-visible{
+  transform:translateY(-4px);
+  box-shadow:0 17px 38px rgba(0,73,118,.16);
+}
+
+body.album-day .youtube-video-card:hover img,
+body.album-day .youtube-video-card:focus-visible img{
+  transform:scale(1.025);
+}
+
+body.album-day .youtube-video-card:hover .youtube-video-play,
+body.album-day .youtube-video-card:focus-visible .youtube-video-play{
+  transform:translate(-50%,-50%) scale(1.06);
+  background:#fff;
+}
+
+body.album-day .youtube-video-card:focus-visible{
+  outline:2px solid #4698CB;
+  outline-offset:4px;
+}
+
+body.album-day .youtube-video-frame{
+  min-height:0;
+}
+
+@media(max-width:720px){
+  body.album-day .youtube-videos{
+    margin-top:24px;
+  }
+
+  body.album-day .youtube-video.is-landscape{
+    max-width:100%;
+  }
+
+  body.album-day .youtube-video.is-short{
+    max-width:min(82vw,340px);
+  }
+
+  body.album-day .youtube-video-play{
+    width:58px;
+    height:58px;
+    font-size:19px;
+  }
+}

@@ -2,35 +2,33 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>12 juin 2026 — Le grand départ</title>
-  <link rel="stylesheet" href="css/site.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Journée de notre voyage de noces en Polynésie française">
+  <title>Voyage de noces — Journée</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/frise.css">
+  <link rel="stylesheet" href="css/jour.css">
+  <link rel="stylesheet" href="css/galerie-mariage.css">
 </head>
-<body>
-  <header class="site-header">
-    <div class="chapter-link">Aller & arrivée</div>
-    <nav class="timeline" aria-label="Chronologie du voyage">
-      <div class="timeline-stages">
-        <span>Aller</span><span>Moorea</span><span>Maupiti</span>
-        <span>Taha’a</span><span>Bora Bora</span><span>Tahiti</span><span>Retour</span>
-      </div>
-      <div id="timeline-dates" class="timeline-dates"></div>
-    </nav>
-  </header>
+<body class="day-page">
+  <header id="travel-timeline" class="travel-timeline-shell" aria-label="Frise chronologique du voyage"></header>
+  <main id="day-page"></main>
 
-  <main id="day-page" class="day-page"></main>
-
-  <div id="lightbox" class="lightbox" hidden>
-    <button class="lightbox-close" type="button" aria-label="Fermer">×</button>
-    <button class="lightbox-prev" type="button" aria-label="Photo précédente">‹</button>
-    <figure>
-      <img id="lightbox-image" src="" alt="">
-      <figcaption id="lightbox-counter"></figcaption>
-    </figure>
-    <button class="lightbox-next" type="button" aria-label="Photo suivante">›</button>
+  <div id="day-lightbox" class="day-lightbox" hidden aria-modal="true" role="dialog" aria-label="Galerie photo">
+    <button class="day-lightbox-close" type="button" aria-label="Fermer">×</button>
+    <button class="day-lightbox-prev" type="button" aria-label="Photo précédente">‹</button>
+    <img id="day-lightbox-image" alt="">
+    <button class="day-lightbox-next" type="button" aria-label="Photo suivante">›</button>
+    <div id="day-lightbox-count" class="day-lightbox-count"></div>
   </div>
 
   <script src="data/jours.js"></script>
+  <script src="js/frise.js"></script>
   <script src="js/jour.js"></script>
 </body>
 </html>

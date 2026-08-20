@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chapitre de notre voyage de noces en Polynésie française">
+  <title>Voyage de noces — Polynésie française</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/frise.css">
+  <link rel="stylesheet" href="css/chapitre.css">
+</head>
+<body class="chapter-page">
+
+  <header id="travel-timeline" class="travel-timeline-shell" aria-label="Frise chronologique du voyage"></header>
+
+  <main>
+    <section class="chapter-hero" aria-labelledby="chapter-title">
+      <img id="chapter-hero-image" class="chapter-hero-image" src="" alt="">
+      <div class="chapter-hero-overlay" aria-hidden="true"></div>
+      <div class="chapter-hero-copy">
+        <h1 id="chapter-title"></h1>
+        <p id="chapter-dates" class="chapter-hero-dates"></p>
+      </div>
+      <a class="chapter-scroll" href="#presentation" aria-label="Voir la présentation de l’étape">⌄</a>
+    </section>
+
+    <section id="presentation" class="chapter-presentation">
+      <div class="chapter-presentation-grid">
+        <div class="chapter-copy">
+          <p id="chapter-kicker" class="chapter-kicker"></p>
+          <div id="chapter-intro" class="chapter-intro"></div>
+        </div>
+
+        <div id="chapter-ambiance" class="chapter-ambiance" aria-label="Photos d’ambiance"></div>
+      </div>
+    </section>
+
+    <section id="days-section" class="chapter-days" aria-labelledby="days-title">
+      <header class="chapter-section-head">
+        <p class="chapter-section-kicker">Notre séjour</p>
+        <h2 id="days-title">Nos jours à <span id="days-island-name"></span></h2>
+      </header>
+      <div id="chapter-days-grid" class="chapter-days-grid"></div>
+      <p id="days-pending" class="chapter-pending" hidden>Les journées de cette étape seront ajoutées ici.</p>
+    </section>
+
+    <section id="next-stage" class="chapter-next" aria-label="Étape suivante">
+      <div class="chapter-next-inner">
+        <div class="chapter-next-logo-wrap">
+          <img id="next-stage-logo" class="chapter-next-logo" src="" alt="">
+        </div>
+        <div class="chapter-next-copy">
+          <p class="chapter-next-label">Étape suivante</p>
+          <h2 id="next-stage-name"></h2>
+          <p id="next-stage-dates" class="chapter-next-dates"></p>
+          <a id="next-stage-link" class="chapter-next-link" href="#">Continuer le voyage <span>→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="chapter-footer">Voyage de noces · Polynésie française · 12 — 27 juin 2026</footer>
+
+  <script src="data/chapitres.js"></script>
+  <script src="js/frise.js"></script>
+  <script src="js/chapitre.js"></script>
+</body>
+</html>

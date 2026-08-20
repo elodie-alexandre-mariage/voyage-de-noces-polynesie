@@ -1,0 +1,196 @@
+/* =========================================================
+   MOTEUR COMMUN DES PAGES CHAPITRE
+   Navigation :
+   - Accueil / Sommaire via la frise commune
+   - îles cliquables dans la frise
+   - étape précédente / sommaire / étape suivante en bas
+   ========================================================= */
+(() => {
+  const database = window.CHAPITRES;
+  if (!database || !database.items) return;
+
+  const CHAPTER_ORDER = ["aller", "moorea", "maupiti", "tahaa", "borabora", "tahiti", "retour"];
+
+  const params = new URLSearchParams(window.location.search);
+  const requestedId = params.get("etape") || "moorea";
+  const chapter = database.items[requestedId] || database.items.moorea;
+
+  document.title = `${chapter.name} — Voyage de noces en Polynésie`;
+
+  renderTimeline(chapter);
+  renderHero(chapter);
+  renderPresentation(chapter);
+  renderDays(chapter);
+  renderStageNavigation(chapter);
+
+  function renderTimeline(item) {
+    if (!window.TravelTimeline) return;
+
+    window.TravelTimeline.render(
+      document.getElementById("travel-timeline"),
+      {
+        start: item.timeline?.start,
+        end: item.timeline?.end,
+        activeIsland: ["moorea", "maupiti", "tahaa", "borabora", "tahiti"].includes(item.id) ? item.id : "",
+        label: item.timeline?.label || ""
+      }
+    );
+  }
+
+  function renderHero(item) {
+    const hero = document.querySelector(".chapter-hero");
+    const image = document.getElementById("chapter-hero-image");
+    const title = document.getElementById("chapter-title");
+    const dates = document.getElementById("chapter-dates");
+
+    title.textContent = item.name;
+    dates.textContent = item.dates;
+
+    hero.style.setProperty("--hero-position", item.heroPosition || "center center");
+    loadImageOrPlaceholder(image, item.hero, `Photo principale — ${item.name}`);
+  }
+
+  function renderPresentation(item) {
+    document.getElementById("chapter-kicker").textContent = item.kicker || `Notre escale à ${item.name}`;
+    document.getElementById("chapter-intro").innerHTML = (item.intro || []).join("");
+
+    const ambiance = document.getElementById("chapter-ambiance");
+    ambiance.innerHTML = "";
+
+    const images = item.ambiance || [];
+
+    if (!images.length) {
+      ambiance.innerHTML = `
+        <figure><div class="chapter-image-placeholder">Photos d’ambiance à choisir pour ${escapeHtml(item.name)}</div></figure>
+        <figure><div class="chapter-image-placeholder">Ambiance 02</div></figure>
+        <figure><div class="chapter-image-placeholder">Ambiance 03</div></figure>
+      `;
+      return;
+    }
+
+    images.slice(0, 3).forEach((src, index) => {
+      const figure = document.createElement("figure");
+      const img = document.createElement("img");
+      img.alt = `${item.name} — photo d’ambiance ${index + 1}`;
+      img.loading = index === 0 ? "eager" : "lazy";
+      figure.appendChild(img);
+      ambiance.appendChild(figure);
+      loadImageOrPlaceholder(img, src, img.alt);
+    });
+  }
+
+  function renderDays(item) {
+    document.getElementById("days-island-name").textContent = item.name;
+
+    const grid = document.getElementById("chapter-days-grid");
+    const pending = document.getElementById("days-pending");
+    const days = item.days || [];
+
+    grid.innerHTML = "";
+    grid.className = "chapter-days-grid";
+    if (days.length) grid.classList.add(`has-${Math.min(days.length, 4)}-days`);
+
+    if (!days.length) {
+      pending.hidden = false;
+      return;
+    }
+
+    pending.hidden = true;
+
+    days.forEach(day => {
+      const card = document.createElement("a");
+      card.className = "chapter-day-card";
+      card.href = day.href;
+      card.innerHTML = `
+        <div class="chapter-day-image">
+          <img alt="${escapeHtml(day.date)} — ${escapeHtml(day.title)}" loading="lazy">
+        </div>
+        <div class="chapter-day-info">
+          <span class="chapter-day-date">${escapeHtml(day.date)}</span>
+          <h3 class="chapter-day-title">${escapeHtml(day.title)}</h3>
+          <span class="chapter-day-arrow" aria-hidden="true">→</span>
+        </div>
+      `;
+
+      grid.appendChild(card);
+      loadImageOrPlaceholder(card.querySelector("img"), day.image, `${day.date} — ${day.title}`);
+    });
+  }
+
+  function renderStageNavigation(item) {
+    const section = document.getElementById("next-stage");
+    if (!section) return;
+
+    const currentIndex = CHAPTER_ORDER.indexOf(item.id);
+    const prevId = currentIndex > 0 ? CHAPTER_ORDER[currentIndex - 1] : null;
+    const nextId = currentIndex >= 0 && currentIndex < CHAPTER_ORDER.length - 1
+      ? CHAPTER_ORDER[currentIndex + 1]
+      : null;
+
+    const previous = prevId ? database.items[prevId] : null;
+    const next = nextId ? database.items[nextId] : null;
+
+    section.hidden = false;
+    section.className = "chapter-stage-nav";
+    section.setAttribute("aria-label", "Navigation entre les étapes du voyage");
+
+    section.innerHTML = `
+      <div class="chapter-stage-nav-inner">
+        ${previous ? stageCard(previous, "prev") : `<span class="chapter-stage-spacer" aria-hidden="true"></span>`}
+
+        <a class="chapter-stage-card summary" href="index.html#sommaire">
+          <span class="chapter-stage-label">Vue d’ensemble</span>
+          <strong>Sommaire</strong>
+          <span class="chapter-stage-action">Toutes les étapes</span>
+        </a>
+
+        ${next ? stageCard(next, "next") : `<span class="chapter-stage-spacer" aria-hidden="true"></span>`}
+      </div>`;
+
+    function stageCard(target, direction) {
+      const isPrev = direction === "prev";
+      return `
+        <a class="chapter-stage-card ${direction}" href="chapitre.html?etape=${encodeURIComponent(target.id)}">
+          <span class="chapter-stage-label">${isPrev ? "← Étape précédente" : "Étape suivante →"}</span>
+          <strong>${escapeHtml(target.name)}</strong>
+          <span class="chapter-stage-dates">${escapeHtml(target.dates)}</span>
+        </a>`;
+    }
+  }
+
+  function loadImageOrPlaceholder(img, src, alt) {
+    if (!img) return;
+
+    if (!src) {
+      replaceWithPlaceholder(img, "Photo à choisir");
+      return;
+    }
+
+    img.alt = alt || "";
+    img.src = src;
+    img.addEventListener("error", () => replaceWithPlaceholder(img, `Image à ajouter : ${fileName(src)}`), { once: true });
+  }
+
+  function replaceWithPlaceholder(img, label) {
+    const parent = img.parentElement;
+    if (!parent) return;
+
+    const placeholder = document.createElement("div");
+    placeholder.className = "chapter-image-placeholder";
+    placeholder.textContent = label;
+    img.replaceWith(placeholder);
+  }
+
+  function fileName(path) {
+    return String(path).split("/").pop() || "photo";
+  }
+
+  function escapeHtml(value) {
+    return String(value)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+})();

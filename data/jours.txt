@@ -1,23 +1,1773 @@
-window.JOURS={
-"26-06-12":{
-dateLabel:"12 juin 2026",
-chapter:"Aller & arrivée",
-title:"Le grand départ",
-subtitle:"De Pont-de-l’Isère à Los Angeles, première partie du voyage vers la Polynésie.",
-next:{date:"26-06-13",label:"13 juin — Arrivée en Polynésie",enabled:false},
-blocks:[
-{type:"sequence",title:"Le départ",text:"Départ de Pont-de-l’Isère. Direction l’aéroport de Lyon pour commencer le voyage de noces.",photos:[
-{src:"photos/26-06-12/26-06-12_aller_0001.jpg",alt:"Départ de Pont-de-l’Isère"},
-{src:"photos/26-06-12/26-06-12_aller_0002.jpg",alt:"Départ de Pont-de-l’Isère"}]},
-{type:"route",from:"Lyon",to:"Paris",note:"Emplacement réservé à la future animation d’environ 5 secondes."},
-{type:"sequence",title:"Lyon → Paris",text:"Premier vol du voyage, de Lyon à Paris-Charles-de-Gaulle.",photos:[
-{src:"photos/26-06-12/26-06-12_aller_0003.jpg",alt:"Vol Lyon vers Paris"},
-{src:"photos/26-06-12/26-06-12_aller_0004.jpg",alt:"Arrivée à Paris-Charles-de-Gaulle"}]},
-{type:"route",from:"Paris",to:"Los Angeles",note:"Emplacement réservé à la future animation d’environ 5 secondes."},
-{type:"sequence",title:"Paris → Los Angeles",text:"Départ de Paris pour la longue traversée jusqu’à Los Angeles.",photos:[
-{src:"photos/26-06-12/26-06-12_aller_0005.jpg",alt:"Départ de Paris vers Los Angeles"},
-{src:"photos/26-06-12/26-06-12_aller_0006.jpg",alt:"À bord du vol Paris vers Los Angeles"},
-{src:"photos/26-06-12/26-06-12_aller_0007.jpg",alt:"Survol de Los Angeles"},
-{src:"photos/26-06-12/26-06-12_aller_0008.jpg",alt:"Arrivée à l’aéroport de Los Angeles"}]},
-{type:"route",from:"Los Angeles",to:"Tahiti",note:"Dernière transition avant l’arrivée en Polynésie le 13 juin."}
-]}}
+window.JOURNAL_DATA = {
+  "meta": {
+    "version": "3.4-style-mariage-toutes-journees-v16",
+    "photosReady": false,
+    "status": "editorial-locked"
+  },
+  "days": {
+    "26-06-12": {
+      "dateLabel": "12 juin 2026",
+      "chapter": "Aller & arrivée",
+      "title": "Le grand départ",
+      "route": "Pont-de-l’Isère → Lyon → Paris → Los Angeles",
+      "activeIsland": "",
+      "heroHint": "",
+      "sequences": [
+        {
+          "title": "Le grand départ",
+          "layout": "album-section",
+          "paragraphs": [
+            "Cette fois, ça y est.",
+            "Après des mois à attendre ce voyage, on quitte Pont-de-l’Isère pour rejoindre l’aéroport de Lyon. Devant nous : Lyon, Paris, Los Angeles, puis enfin Tahiti.",
+            "On sait que le trajet va être extrêmement long, mais pour le moment la fatigue n’existe pas encore. On est surtout surexcités à l’idée de partir enfin pour notre voyage de noces.",
+            "Premier avion du voyage, direction Paris-Charles-de-Gaulle.",
+            "Ce n’est qu’un petit vol, mais il marque réellement le début de l’aventure. Chaque étape nous rapproche un peu plus de la Polynésie, même si elle nous paraît encore très loin.",
+            "À Paris, il faut maintenant embarquer pour le premier vrai long-courrier."
+          ],
+          "mosaicRows": [
+            [
+              {
+                "src": "photos/26-06-12/26-06-12_aller_0001.jpg",
+                "alt": "Départ pour notre voyage de noces"
+              },
+              {
+                "src": "photos/26-06-12/26-06-12_aller_0002.jpg",
+                "alt": "En route pour l’aéroport de Lyon"
+              },
+              {
+                "src": "photos/26-06-12/26-06-12_aller_0003.jpg",
+                "alt": "Premier vol du voyage, Lyon vers Paris"
+              }
+            ]
+          ]
+        },
+        {
+          "title": "Paris → Los Angeles",
+          "layout": "album-section",
+          "paragraphs": [
+            "Cette fois, le voyage devient sérieux.",
+            "À Paris, on rejoint notre porte d’embarquement avant de s’installer pour le premier très long vol du voyage.",
+            "Les heures vont commencer à s’accumuler, mais l’excitation est toujours bien présente : on s’éloigne enfin vraiment de la France."
+          ],
+          "mosaicRows": [
+            [
+              {
+                "src": "photos/26-06-12/26-06-12_aller_0004.jpg",
+                "alt": "Porte d’embarquement à Paris"
+              },
+              {
+                "src": "photos/26-06-12/26-06-12_aller_0005.jpg",
+                "alt": "À bord du vol pour Los Angeles"
+              },
+              {
+                "src": "photos/26-06-12/26-06-12_aller_0006.jpg",
+                "alt": "Premier verre à bord"
+              }
+            ]
+          ]
+        },
+        {
+          "title": "Arrivée à Los Angeles",
+          "layout": "album-section",
+          "paragraphs": [
+            "À l’approche de Los Angeles, les lumières de la ville apparaissent sous l’avion et donnent déjà la sensation d’être vraiment très loin de chez nous.",
+            "Une fois au sol, passage par les États-Unis avant le dernier tronçon du voyage.",
+            "La journée du 12 juin s’achève ici, mais notre trajet, lui, continue : il reste encore un dernier vol pour rejoindre Tahiti au petit matin."
+          ],
+          "mosaicRows": [
+            [
+              {
+                "src": "photos/26-06-12/26-06-12_aller_0007.jpg",
+                "alt": "Los Angeles vu du ciel"
+              },
+              {
+                "src": "photos/26-06-12/26-06-12_aller_0008.jpg",
+                "alt": "Bienvenue aux États-Unis"
+              }
+            ]
+          ]
+        }
+      ],
+      "previous": null,
+      "next": {
+        "date": "26-06-13",
+        "title": "Enfin en Polynésie"
+      },
+      "hero": "",
+      "heroAlt": "Élodie et Alexandre en voiture au moment du départ pour leur voyage de noces"
+    },
+    "26-06-13": {
+      "dateLabel": "13 juin 2026",
+      "chapter": "Aller & arrivée / Moorea",
+      "title": "Enfin en Polynésie",
+      "route": "Tahiti → Moorea",
+      "activeIsland": "moorea",
+      "heroHint": "",
+      "sequences": [
+        {
+          "title": "Enfin à Tahiti",
+          "layout": "album-section",
+          "paragraphs": [
+            "Il est environ 5 h 20 lorsque nous arrivons enfin à Tahiti. Dès la sortie de l’avion, premier choc : la chaleur sur le tarmac. Après toutes ces heures passées dans les avions et les aéroports climatisés, quelques secondes suffisent pour comprendre que l’on vient de changer de monde.",
+            "À l’arrivée, des chants et des danses polynésiennes nous accueillent. On est complètement décalés, très fatigués, mais surtout extrêmement heureux. Cette fois, ça y est : nous sommes en Polynésie.",
+            "Première anecdote du voyage : la personne chargée de nous accueillir cherche un certain Pierre Bourgin. On comprend tout de suite qu’il s’agit d’Alex, sans savoir d’où vient l’erreur. On découvrira ensuite que son passeport indique aussi ses autres prénoms, Jean Pierre, et que quelqu’un a simplement choisi le mauvais. Pierre Bourgin va donc nous accompagner pendant une bonne partie du séjour… et devenir l’un de nos running gags."
+          ],
+          "mosaicRows": [
+            [
+              {
+                "src": "photos/26-06-13/arrivée/26-06-13_arrivee_0001.jpg",
+                "alt": "Premier selfie à l’arrivée"
+              },
+              {
+                "src": "photos/26-06-13/arrivée/26-06-13_arrivee_0002.jpg",
+                "alt": "Accueil polynésien"
+              },
+              {
+                "src": "photos/26-06-13/arrivée/26-06-13_arrivee_0003.jpg",
+                "alt": "Bienvenue à Tahiti"
+              },
+              {
+                "src": "photos/26-06-13/arrivée/26-06-13_arrivee_0004.jpg",
+                "alt": "Colliers de fleurs"
+              },
+              {
+                "src": "photos/26-06-13/arrivée/26-06-13_arrivee_0005.jpg",
+                "alt": "Arrivée à Tahiti"
+              }
+            ]
+          ]
+        },
+        {
+          "title": "Cap sur Moorea",
+          "layout": "album-section",
+          "paragraphs": [
+            "On partage ensuite le transfert vers le port avec une autre Française, une Marseillaise particulièrement expressive. Entre le manque de sommeil, le décalage horaire et cette première rencontre assez animée, le voyage commence vraiment.",
+            "Puis direction le ferry pour Moorea. Malgré la fatigue, pas question de rester enfermés à l’intérieur : on s’installe sur le pont pour profiter de la traversée. Le vent, la mer et les reliefs de Moorea qui apparaissent au loin suffisent à nous faire oublier quelques minutes les heures de voyage."
+          ],
+          "mosaicRows": [
+            [
+              {
+                "src": "photos/26-06-13/arrivée/26-06-13_arrivee_0006.jpg",
+                "alt": "Moorea apparaît"
+              },
+              {
+                "src": "photos/26-06-13/arrivée/26-06-13_arrivee_0007.jpg",
+                "alt": "Arrivée à Moorea"
+              },
+              {
+                "src": "photos/26-06-13/arrivée/26-06-13_arrivee_0008.jpg",
+                "alt": "Alex pendant le transfert"
+              },
+              {
+                "src": "photos/26-06-13/arrivée/26-06-13_arrivee_0009.jpg",
+                "alt": "Élodie pendant le transfert"
+              }
+            ]
+          ]
+        },
+        {
+          "title": "Premiers pas à Moorea",
+          "layout": "album-section",
+          "paragraphs": [
+            "À notre arrivée, Romuald nous récupère pour nous conduire à l’hôtel. Il est super cool, très détendu et extrêmement positif. Dès ce premier trajet, on découvre cette façon beaucoup plus tranquille de prendre les choses que l’on retrouvera souvent chez les Polynésiens.",
+            "Avant de nous laisser, il nous conseille un restaurant situé tout près de l’hôtel. On y va pour déjeuner et on découvre notamment l’Okipik, une eau gazeuse locale dont le nom nous fait immédiatement rire : « l’eau qui pique ». Difficile de faire plus clair.",
+            "De retour à l’hôtel, quelques petites attentions nous rappellent que nous sommes bien en voyage de noces."
+          ],
+          "mosaicRows": [
+            [
+              {
+                "src": "photos/26-06-13/arrivée/26-06-13_arrivee_0010.jpg",
+                "alt": "Notre chambre"
+              },
+              {
+                "src": "photos/26-06-13/arrivée/26-06-13_arrivee_0011.jpg",
+                "alt": "Attention de bienvenue"
+              },
+              {
+                "src": "photos/26-06-13/j1/26-06-13_j1_0001.jpg",
+                "alt": "Okipik"
+              },
+              {
+                "src": "photos/26-06-13/j1/26-06-13_j1_0002.jpg",
+                "alt": "Déjeuner près de l’hôtel"
+              },
+              {
+                "src": "photos/26-06-13/j1/26-06-13_j1_0003.jpg",
+                "alt": "Déjeuner près de l’hôtel"
+              },
+              {
+                "src": "photos/26-06-13/j1/26-06-13_j1_0004.jpg",
+                "alt": "Plat du déjeuner"
+              },
+              {
+                "src": "photos/26-06-13/j1/26-06-13_j1_0005.jpg",
+                "alt": "Dessert du déjeuner"
+              }
+            ]
+          ],
+          "blocks": [
+            {
+              "heading": "Une première journée au ralenti",
+              "layout": "album-subsection",
+              "paragraphs": [
+                "Après presque 24 heures de trajet, la fatigue commence sérieusement à se faire sentir. On fait deux petites siestes dans la journée, mais malgré tout, impossible de ne pas aller découvrir notre première plage polynésienne.",
+                "Le soir, on mange simplement une pizza. On est complètement épuisés et on n’attend qu’une chose : aller se coucher. Le problème, c’est qu’il est encore beaucoup trop tôt… alors on lutte un peu pour tenir jusqu’à une heure à peu près raisonnable.",
+                "Un cocktail, une pizza, puis enfin le lit. Cette première journée à Moorea aura été courte, mais on est simplement heureux d’être enfin là."
+              ],
+              "mosaicRows": [
+                [
+                  {
+                    "src": "photos/26-06-13/j1/26-06-13_j1_0006.jpg",
+                    "alt": "Première plage polynésienne"
+                  },
+                  {
+                    "src": "photos/26-06-13/j1/26-06-13_j1_0007.jpg",
+                    "alt": "Cocktail du premier soir"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "previous": {
+        "date": "26-06-12",
+        "title": "Le grand départ"
+      },
+      "next": {
+        "date": "26-06-14",
+        "title": "Découverte de Moorea et de son lagon"
+      },
+      "hero": "",
+      "heroAlt": "Élodie et Alexandre avec leurs colliers de fleurs à leur arrivée en Polynésie"
+    },
+    "26-06-14": {
+      "dateLabel": "14 juin 2026",
+      "chapter": "Moorea",
+      "title": "Découverte de Moorea et de son lagon",
+      "route": "Moorea",
+      "activeIsland": "moorea",
+      "heroHint": "Requins à pointe noire et raies pastenagues dans le lagon.",
+      "sequences": [
+        {
+          "title": "Un réveil très polynésien",
+          "paragraphs": [
+            "Le décalage horaire est toujours bien présent et on se réveille très tôt.",
+            "Entre les coqs, les chiens, le vent et le bruit de la mer, l’ambiance est assez particulière. Bizarrement, on adore.",
+            "On est surtout hyper impatients : aujourd’hui, c’est notre première vraie excursion dans le lagon.",
+            "Sauf qu’un changement d’horaire ne nous a pas été communiqué et le groupe est venu nous chercher une heure plus tôt.",
+            "Autant dire que la déception est importante, surtout après s’être réveillés aussi tôt et avoir attendu cette excursion avec autant d’impatience.",
+            "Mais bon… on est en voyage de noces, en Polynésie.",
+            "Et on commence déjà à comprendre qu’ici, on finit souvent par trouver une solution."
+          ],
+          "featured": [],
+          "photos": []
+        },
+        {
+          "title": "Un bateau vient nous récupérer sur la plage",
+          "paragraphs": [
+            "Après quelques échanges, l’excursion n’est finalement pas perdue.",
+            "Un bateau vient directement nous récupérer sur la plage de notre hôtel pour nous permettre de rejoindre le reste du groupe.",
+            "Difficile d’imaginer meilleur rattrapage.",
+            "Quelques minutes plus tard, nous voilà enfin sur le lagon avec notre guide, lui aussi complètement détendu et super sympa.",
+            "Cette fois, la journée peut réellement commencer."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO FORTE — DÉPART DEPUIS LA PLAGE",
+              "note": "Si tu as le bateau venant vous chercher devant l’hôtel, c’est une très bonne image narrative.",
+              "layout": "wide",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Requins et raies",
+          "paragraphs": [
+            "L’eau est chaude, agréable et remplie de poissons multicolores.",
+            "Puis arrivent les premières vraies stars de la journée : les requins à pointe noire et les raies pastenagues.",
+            "On se retrouve dans l’eau au milieu d’eux et on peut même caresser les raies. La sensation nous surprend énormément : leur texture est beaucoup plus douce et agréable que ce que l’on imaginait.",
+            "Les voir passer autour de nous dans ce décor est complètement irréel.",
+            "C’est notre premier gros moment « waouh » du voyage."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO MAJEURE ABSOLUE — REQUINS + RAIES",
+              "note": "Le cœur de la journée. Très grande mise en avant.",
+              "layout": "hero",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Une journée sur le motu",
+          "paragraphs": [
+            "Pour le déjeuner, direction un motu.",
+            "On participe notamment à la préparation du fameux poisson cru au lait de coco, avec du thon et des légumes croquants. On adore tellement qu’on se dit déjà qu’il faudra essayer d’en refaire à la maison.",
+            "Pendant la journée, on discute aussi avec un couple et deux amies, dont l’une vit à Tahiti. On mange avec eux et on échange pas mal.",
+            "L’après-midi continue ensuite avec différents ateliers : apprendre à nouer un paréo, décortiquer une noix de coco, s’essayer à la danse tahitienne…",
+            "L’ambiance est familiale, détendue et personne ne se prend vraiment au sérieux.",
+            "La journée se termine avec un spectacle de feu."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO FORTE — DÉJEUNER / POISSON CRU",
+              "note": "Préparation du poisson cru ou repas sur le motu.",
+              "layout": "wide",
+              "src": ""
+            },
+            {
+              "label": "PHOTO FORTE — SPECTACLE DE FEU",
+              "note": "À utiliser pour fermer visuellement l’activité.",
+              "layout": "wide",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Retour à l’hôtel",
+          "paragraphs": [
+            "Retour à l’hôtel après cette première vraie journée d’excursion en Polynésie.",
+            "On a attendu ce moment pendant tellement longtemps qu’on avait peur d’en attendre trop.",
+            "Finalement, pas du tout.",
+            "Si on devait résumer la journée comme sur Polarsteps :",
+            "Requins. Raies. Motu."
+          ],
+          "featured": [],
+          "photos": []
+        }
+      ],
+      "previous": {
+        "date": "26-06-13",
+        "title": "Enfin en Polynésie"
+      },
+      "next": {
+        "date": "26-06-15",
+        "title": "Journée safari et découverte"
+      }
+    },
+    "26-06-15": {
+      "dateLabel": "15 juin 2026",
+      "chapter": "Moorea",
+      "title": "Journée safari et découverte",
+      "route": "Moorea côté terre",
+      "activeIsland": "moorea",
+      "heroHint": "Panorama du Belvédère sur les baies de Moorea.",
+      "sequences": [
+        {
+          "title": "Encore réveillés beaucoup trop tôt",
+          "paragraphs": [
+            "Pour notre dernier jour complet à Moorea, le décalage horaire continue de nous jouer des tours.",
+            "Réveil vers 3 h, puis à nouveau vers 5 h.",
+            "Heureusement, rien n’est prévu le matin. On prend notre temps, on profite une dernière fois de la plage de l’hôtel et on déjeune rapidement.",
+            "À l’origine, notre après-midi devait lui aussi être libre."
+          ],
+          "featured": [],
+          "photos": []
+        },
+        {
+          "title": "Une excursion imprévue grâce à Romuald",
+          "paragraphs": [
+            "Lors de notre arrivée, Romuald nous avait conseillé une excursion d’une demi-journée avec Moorea Explorer.",
+            "L’idée : partir en safari dans l’intérieur de l’île avec un guide qui nous parle des paysages, mais également de la vie à Moorea.",
+            "Finalement, on se laisse tenter.",
+            "En début d’après-midi, on vient nous récupérer directement à l’hôtel pour environ quatre heures de découverte."
+          ],
+          "featured": [],
+          "photos": []
+        },
+        {
+          "title": "Moorea côté terre",
+          "paragraphs": [
+            "L’excursion commence du côté de la baie d’Opunohu, avec son sable noir et les montagnes tout autour.",
+            "Un peu plus loin, notre guide nous emmène voir les anguilles d’une rivière.",
+            "Et elles sont vraiment balaises.",
+            "Après les requins et les raies de la veille, notre découverte de la faune polynésienne continue tranquillement.",
+            "On traverse ensuite les champs d’ananas, entourés des massifs de Moorea, avant de rejoindre le lycée agricole. On y goûte plusieurs confitures locales et on a rapidement une favorite : goyave-vanille.",
+            "Puis vient le Belvédère.",
+            "Et là, la vue est incroyable.",
+            "Après avoir découvert Moorea depuis son lagon, on la découvre cette fois depuis les hauteurs, avec ses baies et ses reliefs devant nous.",
+            "L’excursion continue ensuite sur un marae, ancien lieu sacré polynésien, où notre guide nous raconte une partie de l’histoire de l’île.",
+            "On termine par une dégustation à l’usine de jus de fruits et quelques boutiques avant de rentrer à l’hôtel vers 17 h 30.",
+            "Une excursion que nous n’avions absolument pas prévue et qui aura finalement été une excellente façon de terminer Moorea.",
+            "Demain, direction Maupiti."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO FORTE — BAIE D’OPUNOHU",
+              "note": "Vue avec sable noir et reliefs.",
+              "layout": "wide",
+              "src": ""
+            },
+            {
+              "label": "PHOTO MAJEURE — BELVÉDÈRE",
+              "note": "Le panorama principal de la journée.",
+              "layout": "hero",
+              "src": ""
+            }
+          ],
+          "photos": []
+        }
+      ],
+      "previous": {
+        "date": "26-06-14",
+        "title": "Découverte de Moorea et de son lagon"
+      },
+      "next": {
+        "date": "26-06-16",
+        "title": "De Moorea à Maupiti"
+      }
+    },
+    "26-06-16": {
+      "dateLabel": "16 juin 2026",
+      "chapter": "Moorea / Maupiti",
+      "title": "De Moorea à Maupiti",
+      "route": "Moorea → Tahiti → Maupiti",
+      "activeIsland": "maupiti",
+      "heroHint": "Vue aérienne spectaculaire de Maupiti ou sortie de l’avion sur le motu.",
+      "sequences": [
+        {
+          "title": "Réveil à 3 h 15",
+          "paragraphs": [
+            "Nouveau changement d’île et nouveau réveil beaucoup trop tôt.",
+            "3 h 15.",
+            "À 4 h, un taxi vient nous récupérer pour rejoindre l’embarcadère. Le ferry pour Papeete part vers 5 h.",
+            "Il fait encore complètement nuit et la mer est assez agitée.",
+            "Très rapidement, Élodie commence à avoir le mal de mer : sueurs froides et sensation d’être complètement brassée par le bateau.",
+            "Alex tient heureusement le coup et essaie de l’aider comme il peut.",
+            "Une trentaine de minutes plus tard, on retrouve enfin la terre ferme à Papeete.",
+            "On apprend au passage que certains écoliers de Moorea effectuent régulièrement ce trajet pour aller en cours. Ça aide à relativiser notre réveil matinal."
+          ],
+          "featured": [],
+          "photos": []
+        },
+        {
+          "title": "Le plus beau vol du voyage",
+          "paragraphs": [
+            "Direction l’aéroport pour prendre notre avion de 8 h vers Maupiti.",
+            "Et ce vol restera probablement le plus beau que l’on ait jamais fait.",
+            "Depuis le hublot, on survole Moorea, Bora Bora et plusieurs autres îles entourées de leurs lagons.",
+            "Les nuances de bleu, les récifs, les motu…",
+            "Tout paraît presque irréel vu du ciel.",
+            "On reste collés au hublot pendant une bonne partie du trajet."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO MAJEURE — VOL INTER-ÎLES",
+              "note": "La meilleure vue aérienne du trajet.",
+              "layout": "hero",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Bienvenue à Maupiti",
+          "paragraphs": [
+            "Vers 9 h, l’avion se pose sur une minuscule piste au milieu du lagon.",
+            "L’aéroport est tellement petit que l’on se demande presque si on peut réellement appeler ça un aéroport.",
+            "On nous explique que les vols ne sont même pas quotidiens et que les conditions météo peuvent parfois empêcher les avions de s’y poser, notamment à cause de la petite piste entourée par l’océan.",
+            "Mais dès que l’on descend de l’avion, tout le reste disparaît.",
+            "Énorme effet waouh.",
+            "Le lagon, la montagne, les palmiers…",
+            "Quand on imaginait la Polynésie avant de venir, c’est exactement ce genre d’image que l’on avait en tête.",
+            "On prend ensuite le bateau vers l’île principale avec Maupiti de Raiguetss en fond sonore.",
+            "Difficile de trouver meilleure chanson pour arriver ici.",
+            "Une fois sur l’île, on fait une partie du trajet installés à l’arrière d’un pick-up. Le vent, les petites routes, la végétation… on adore.",
+            "On rejoint finalement la pension Teheimana. Notre hôte est sympa, même s’il est assez… brut de décoffrage.",
+            "On se dit qu’on verra bien comment vont se passer les trois prochains jours."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO MAJEURE — ARRIVÉE À MAUPITI",
+              "note": "Sortie de l’avion, piste, lagon et montagne si possible.",
+              "layout": "hero",
+              "src": ""
+            },
+            {
+              "label": "PHOTO FORTE — BATEAU / PICK-UP",
+              "note": "Une image spontanée du transfert peut être très vivante.",
+              "layout": "wide",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Le couac de Moorea nous offre un ULM",
+          "paragraphs": [
+            "Après le problème d’horaire de notre excursion à Moorea, Alex avait écrit à Tourlane.",
+            "L’agence nous propose finalement une compensation assez inattendue : un tour de Maupiti en ULM.",
+            "Le petit appareil n’ayant que deux places, pilote compris, nous devons partir chacun notre tour pour environ 30 à 40 minutes.",
+            "Depuis le ciel, le spectacle est fou.",
+            "On distingue toute l’île, le lagon, le jardin de corail et même des raies pastenagues dans l’eau.",
+            "Une expérience sensationnelle que nous n’avions absolument pas prévue.",
+            "Finalement, l’excursion ratée à Moorea aura eu du bon."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO MAJEURE — ULM AU-DESSUS DE MAUPITI",
+              "note": "Une vraie grande respiration visuelle.",
+              "layout": "hero",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Première soirée à la pension",
+          "paragraphs": [
+            "Après cette journée commencée à 3 h 15, on retrouve la pension pour dîner avec deux autres voyageurs.",
+            "Au menu : salade de thon cru, poulet en sauce et riz.",
+            "Très copieux, très bon et exactement ce qu’il fallait avant de dormir."
+          ],
+          "featured": [],
+          "photos": []
+        }
+      ],
+      "previous": {
+        "date": "26-06-15",
+        "title": "Journée safari et découverte"
+      },
+      "next": {
+        "date": "26-06-17",
+        "title": "À la rencontre des raies manta"
+      }
+    },
+    "26-06-17": {
+      "dateLabel": "17 juin 2026",
+      "chapter": "Maupiti",
+      "title": "À la rencontre des raies manta",
+      "route": "Lagon de Maupiti",
+      "activeIsland": "maupiti",
+      "heroHint": "Raie manta sous l’eau, idéalement une image montrant sa grâce et sa taille.",
+      "sequences": [
+        {
+          "title": "Une excursion que l’on n’oubliera jamais",
+          "paragraphs": [
+            "La veille, des voyageurs croisés à la pension nous avaient conseillé Arii Tour.",
+            "On réserve donc l’excursion et Arii vient nous récupérer directement à la pension avec les autres participants.",
+            "À peine le bateau commence-t-il à naviguer qu’Arii sort son ukulélé et se met à chanter.",
+            "Et là, il se passe quelque chose de difficile à expliquer.",
+            "Le lagon, Maupiti autour de nous, le bateau, cette chanson, le ukulélé…",
+            "On se sent juste extrêmement bien.",
+            "Heureux d’être là. Heureux d’être ensemble.",
+            "Un vrai moment hors du temps.",
+            "Élodie a les larmes aux yeux… pour ne pas dire un peu plus.",
+            "Puis vient le moment que nous attendons le plus : les raies manta.",
+            "Après les consignes données pour respecter les animaux, on se met à l’eau.",
+            "Quelques mètres plus loin, quatre ou cinq manta évoluent autour des rochers de corail.",
+            "Leur façon de se déplacer est incroyablement lente et gracieuse. Elles semblent flotter.",
+            "C’est majestueux et presque apaisant à regarder.",
+            "Jusqu’au moment où l’une d’elles passe extrêmement près d’Élodie, qui ne l’avait pas du tout vue arriver.",
+            "Grosse frayeur.",
+            "On reste tout de même près d’une heure dans l’eau à les observer.",
+            "L’excursion continue ensuite dans un jardin de corail rempli de poissons et de coraux.",
+            "Puis Arii nous fait goûter plusieurs fruits locaux : bananes, mangues, pamplemousse très sucré, accompagnés de jus et de punch.",
+            "Une matinée absolument magique."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO FORTE ÉMOTIONNELLE — ARII + UKULÉLÉ",
+              "note": "Même si la photo est moins spectaculaire techniquement, elle raconte un moment clé.",
+              "layout": "wide",
+              "src": ""
+            },
+            {
+              "label": "PHOTO MAJEURE ABSOLUE — RAIE MANTA",
+              "note": "Un des souvenirs majeurs de tout le voyage.",
+              "layout": "hero",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "L’unique plage de Maupiti",
+          "paragraphs": [
+            "Arii nous dépose ensuite sur l’unique plage de Maupiti.",
+            "On mange un sandwich dans un petit restaurant local avant de passer l’après-midi entre baignade et soleil.",
+            "Peut-être un peu trop de soleil d’ailleurs.",
+            "À la fin de l’après-midi, on a tous les deux bien cramé."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO FORTE — PLAGE DE MAUPITI",
+              "note": "Une image calme après l’émotion de l’excursion.",
+              "layout": "wide",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Soirée cuisine avec Maï",
+          "paragraphs": [
+            "Le soir, on prépare le repas avec Maï.",
+            "Au menu : sashimi de thon à la polynésienne, poulet au curry et lait de coco accompagné de semoule, puis ananas.",
+            "On partage le dîner avec les deux voyageurs déjà présents et une nouvelle famille composée des parents et de leur fille.",
+            "Une soirée toute simple, mais très conviviale.",
+            "Et lorsqu’on repense à tout ce que l’on vient de vivre dans la journée, aucun doute :",
+            "cette excursion restera notre préférée de tout le voyage."
+          ],
+          "featured": [],
+          "photos": []
+        }
+      ],
+      "previous": {
+        "date": "26-06-16",
+        "title": "De Moorea à Maupiti"
+      },
+      "next": {
+        "date": "26-06-18",
+        "title": "Maupiti vue d’en haut"
+      }
+    },
+    "26-06-18": {
+      "dateLabel": "18 juin 2026",
+      "chapter": "Maupiti",
+      "title": "Maupiti vue d’en haut",
+      "route": "Mont Teurafaatiu",
+      "activeIsland": "maupiti",
+      "heroHint": "Panorama depuis le sommet du mont Teurafaatiu.",
+      "sequences": [
+        {
+          "title": "Une excellente idée… selon Alex",
+          "paragraphs": [
+            "Dernier jour complet à Maupiti.",
+            "Après environ trois minutes de pluie tropicale, Alex propose une activité formidable : grimper au sommet du mont Teurafaatiu.",
+            "Élodie, elle, se demande surtout pourquoi faire une randonnée en vacances alors qu’il y a une plage, de l’eau turquoise et la possibilité de ne rien faire.",
+            "La promesse de la vue depuis le sommet finit malgré tout par gagner.",
+            "Vers 9 h 30, on prend les vélos pour rejoindre le départ.",
+            "Il fait déjà très chaud et extrêmement humide.",
+            "On arrive au pied de la randonnée… déjà en sueur."
+          ],
+          "featured": [],
+          "photos": []
+        },
+        {
+          "title": "À l’assaut du Teurafaatiu",
+          "paragraphs": [
+            "Le sentier s’enfonce rapidement dans une végétation très dense.",
+            "Par endroits, il y a tellement de feuillage au-dessus de nous qu’on a presque l’impression que la nuit tombe.",
+            "Il fait chaud, humide et la pente se fait rapidement sentir.",
+            "Élodie développe alors une stratégie particulièrement efficace : discuter avec les personnes croisées sur le chemin afin de prolonger discrètement les pauses.",
+            "Au bout d’environ trente minutes apparaît un premier passage avec une corde.",
+            "Puis un deuxième.",
+            "Puis encore un autre.",
+            "Au total, cinq passages avec des cordes, de plus en plus proches d’une initiation à l’escalade.",
+            "On commence sérieusement à remettre en question la définition locale de « difficulté moyenne ».",
+            "Mode Spiderman activé.",
+            "Vers 11 h 30, on atteint enfin le sommet.",
+            "Et là, tout est oublié.",
+            "Maupiti et son lagon s’étendent entièrement devant nous.",
+            "On avait déjà vu l’île depuis l’ULM, mais cette fois la sensation est différente. Le fait d’avoir grimpé jusqu’ici par nous-mêmes rend le panorama encore plus beau.",
+            "Ça valait clairement la transpiration."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO FORTE — PASSAGE À LA CORDE",
+              "note": "Une image montrant réellement la difficulté.",
+              "layout": "wide",
+              "src": ""
+            },
+            {
+              "label": "PHOTO MAJEURE ABSOLUE — PANORAMA DU SOMMET",
+              "note": "Une des photos fortes de tout le site.",
+              "layout": "hero",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "La descente et la récompense",
+          "paragraphs": [
+            "Il faut maintenant redescendre.",
+            "C’est un peu moins physique pour le souffle, mais beaucoup moins agréable pour les genoux d’Élodie.",
+            "La chaleur, la fatigue et la faim commencent sérieusement à se faire sentir.",
+            "Une fois en bas, priorité absolue : manger.",
+            "On trouve un restaurant éphémère où l’on prend notamment un carpaccio de thon avec des frites et des nouilles sautées.",
+            "Après la randonnée, honnêtement, tout aurait probablement été délicieux."
+          ],
+          "featured": [],
+          "photos": []
+        },
+        {
+          "title": "Enfin une fin de journée tranquille",
+          "paragraphs": [
+            "Retour à la pension, douche et après-midi calme.",
+            "On regarde des oiseaux ressemblant à des hirondelles plonger dans l’eau pour attraper des poissons.",
+            "Le soir, on mange du thon mi-cuit, du poulet frit et des pâtes.",
+            "Puis partie de Uno avec Christelle et Loane, pendant que Jacques part sur le ponton avec une lampe frontale pour observer les poissons.",
+            "On finit par le rejoindre et on termine la soirée en regardant les étoiles.",
+            "Finalement, la plage aurait été beaucoup plus reposante.",
+            "Mais on n’aurait jamais eu cette vue."
+          ],
+          "featured": [],
+          "photos": []
+        }
+      ],
+      "previous": {
+        "date": "26-06-17",
+        "title": "À la rencontre des raies manta"
+      },
+      "next": {
+        "date": "26-06-19",
+        "title": "De Maupiti à Taha’a"
+      }
+    },
+    "26-06-19": {
+      "dateLabel": "19 juin 2026",
+      "chapter": "Maupiti / Taha’a",
+      "title": "De Maupiti à Taha’a",
+      "route": "Maupiti → Raiatea → Taha’a",
+      "activeIsland": "tahaa",
+      "heroHint": "Arrivée à Taha’a, route tropicale ou première vue du lodge.",
+      "sequences": [
+        {
+          "title": "Au revoir Maupiti",
+          "paragraphs": [
+            "Après trois jours incroyables, il faut quitter Maupiti.",
+            "On rend notre chambre puis on attend jusqu’à environ 12 h 30 que le taxi boat nous emmène vers l’aéroport.",
+            "Entre l’ULM, les manta, la randonnée et l’ambiance de la pension, Maupiti aura été un véritable coup de cœur.",
+            "On serait facilement restés quelques jours de plus."
+          ],
+          "featured": [],
+          "photos": []
+        },
+        {
+          "title": "Raiatea puis Taha’a",
+          "paragraphs": [
+            "Notre avion a une vingtaine de minutes de retard avant de partir vers Raiatea.",
+            "On avait notamment retenu l’importance de Raiatea dans l’histoire polynésienne, mais cette fois nous ne faisons qu’y passer.",
+            "À peine arrivés, on prend un nouveau taxi boat en direction de Taha’a.",
+            "À ce stade du voyage, les journées avion → bateau → voiture commencent presque à devenir normales."
+          ],
+          "featured": [],
+          "photos": []
+        },
+        {
+          "title": "Élodie prend le volant",
+          "paragraphs": [
+            "Des voyageurs rencontrés plus tôt dans le séjour, déjà passés par Taha’a, nous avaient conseillé de louer une voiture car les différents endroits sont assez éloignés.",
+            "On suit donc leur conseil dès notre arrivée.",
+            "Et pour les prochains jours, Élodie devient officiellement la pilote.",
+            "Notre guide part devant et nous la suivons pendant une vingtaine de minutes jusqu’à l’hôtel.",
+            "Très bonne surprise à l’arrivée : l’endroit est beau, moderne et vraiment agréable."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO FORTE — ROUTE DE TAHA’A",
+              "note": "Une image prise pendant le trajet derrière la guide peut être très évocatrice.",
+              "layout": "wide",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Première soirée à Taha’a",
+          "paragraphs": [
+            "Pour notre première soirée, on nous recommande un dîner-spectacle polynésien.",
+            "Le cadre est parfait : les pieds dans le sable, un punch à la main et des musiciens locaux autour de nous.",
+            "On commence par apprendre différentes façons de nouer un paréo.",
+            "Puis vient la danse.",
+            "Élodie rejoint les femmes tandis qu’Alex rejoint les hommes.",
+            "Pour Élodie, ça fonctionne plutôt bien.",
+            "Pour Alex, on se rend rapidement compte que les cours de danse pris avant le mariage n’ont pas vraiment préparé à ça.",
+            "Mais on participe, on rigole et c’est exactement ce que l’on aime dans ce genre de soirée.",
+            "La soirée se termine avec une danse du feu.",
+            "Taha’a commence très bien."
+          ],
+          "featured": [
+            {
+              "label": "DUO — ÉLODIE / ALEX EN DANSE",
+              "note": "Si possible une photo de chacun dans son groupe.",
+              "layout": "duo",
+              "src": ""
+            },
+            {
+              "label": "PHOTO FORTE — DANSE DU FEU",
+              "note": "Belle image de clôture de soirée.",
+              "layout": "wide",
+              "src": ""
+            }
+          ],
+          "photos": []
+        }
+      ],
+      "previous": {
+        "date": "26-06-18",
+        "title": "Maupiti vue d’en haut"
+      },
+      "next": {
+        "date": "26-06-20",
+        "title": "Entre lagon et traditions"
+      }
+    },
+    "26-06-20": {
+      "dateLabel": "20 juin 2026",
+      "chapter": "Taha’a",
+      "title": "Entre lagon et traditions",
+      "route": "Taha’a",
+      "activeIsland": "tahaa",
+      "heroHint": "Jardin de corail ou image très identitaire de Taha’a entre vanille et lagon.",
+      "sequences": [
+        {
+          "title": "À la découverte des savoir-faire de Taha’a",
+          "paragraphs": [
+            "Terainui Tour vient nous récupérer vers 8 h 40 pour une journée qui va mélanger découverte de l’île et lagon.",
+            "Premier arrêt : une ferme perlière.",
+            "On découvre les différentes étapes nécessaires pour obtenir les fameuses perles de Tahiti, ce qui détermine leur taille, leur qualité ou leur rareté, mais aussi les keshi, qui peuvent apparaître lorsque le noyau implanté est rejeté.",
+            "Deuxième étape : une rhumerie.",
+            "On découvre la fabrication puis, évidemment, vient le moment de la dégustation.",
+            "Petit détail : il est environ 10 h du matin.",
+            "Le rhum à cette heure-là, ça réveille.",
+            "On nous présente également l’huile de coco et le tamanu, beaucoup utilisé localement pour ses propriétés réparatrices.",
+            "Puis direction la vanilleraie.",
+            "On découvre tout le travail nécessaire autour de la vanille : pollinisation, séchage, préparation des gousses…",
+            "Et surtout cette odeur absolument incroyable.",
+            "On comprend très vite pourquoi Taha’a est surnommée l’île Vanille."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO FORTE — FERME PERLIÈRE",
+              "note": "Une photo démonstrative, geste ou perle.",
+              "layout": "wide",
+              "src": ""
+            },
+            {
+              "label": "PHOTO SOUVENIR — RHUM À 10 H",
+              "note": "Si vous avez une image amusante de la dégustation.",
+              "layout": "standard",
+              "src": ""
+            },
+            {
+              "label": "PHOTO FORTE — VANILLE",
+              "note": "Macro de gousses/fleurs ou scène de préparation.",
+              "layout": "wide",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Retour dans le lagon",
+          "paragraphs": [
+            "On reprend ensuite le bateau et on retrouve une zone où se trouvent une dizaine de requins à pointe noire.",
+            "Même après en avoir déjà vus à Moorea, les observer aussi nombreux au même endroit reste impressionnant."
+          ],
+          "featured": [],
+          "photos": []
+        },
+        {
+          "title": "Déjeuner sur le motu",
+          "paragraphs": [
+            "Pour le déjeuner, direction un motu.",
+            "La table est presque installée les pieds dans l’eau.",
+            "Des raies pastenagues viennent même nager directement au bord de la plage pendant le repas.",
+            "À force, on commence presque à trouver ça normal."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO FORTE — REPAS + RAIES",
+              "note": "Si une image rassemble le motu et les raies, très bon choix.",
+              "layout": "wide",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Jardin de corail",
+          "paragraphs": [
+            "L’après-midi continue avec un jardin de corail préservé.",
+            "Beaucoup de poissons, des coraux colorés et une nouvelle séance de snorkeling.",
+            "Notre guide nous montre aussi comment ouvrir une noix de coco et on la mange directement sur place.",
+            "Difficile de faire plus frais."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO MAJEURE — JARDIN DE CORAIL",
+              "note": "La meilleure image sous-marine de la journée.",
+              "layout": "hero",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Fête de la musique à l’école",
+          "paragraphs": [
+            "Après un retour à l’hôtel et un passage par la piscine, on reprend la voiture pour la soirée.",
+            "Direction la fête de la musique organisée à l’école du village.",
+            "On gare la voiture au bord de la route, sans trop savoir s’il s’agit réellement d’une place autorisée.",
+            "Par réflexe, on demande à des locaux si on risque une amende.",
+            "Leur regard nous fait rapidement comprendre que notre question est extrêmement française.",
+            "Encore une fois, on retrouve cette manière beaucoup plus simple de voir les choses : si ça ne gêne personne, ça ne pose pas vraiment de problème.",
+            "Sur place, différents groupes jouent et chantent, beaucoup accompagnés au ukulélé.",
+            "On termine la soirée dans un restaurant à environ 200 mètres où l’on mange des produits locaux et du poisson frais, avec plusieurs plats parfumés à la vanille.",
+            "Après l’avoir découverte le matin dans la vanilleraie, on termine donc la journée en la retrouvant dans l’assiette.",
+            "Et c’est délicieux."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO FORTE — FÊTE DE LA MUSIQUE",
+              "note": "Une image de l’école, des groupes ou des ukulélés.",
+              "layout": "wide",
+              "src": ""
+            }
+          ],
+          "photos": []
+        }
+      ],
+      "previous": {
+        "date": "26-06-19",
+        "title": "De Maupiti à Taha’a"
+      },
+      "next": {
+        "date": "26-06-21",
+        "title": "Taha’a à notre rythme"
+      }
+    },
+    "26-06-21": {
+      "dateLabel": "21 juin 2026",
+      "chapter": "Taha’a",
+      "title": "Taha’a à notre rythme",
+      "route": "Tour de Taha’a en voiture",
+      "activeIsland": "tahaa",
+      "heroHint": "Route humide et brumeuse au milieu d’une végétation très dense, ambiance Jurassic Park.",
+      "sequences": [
+        {
+          "title": "La météo décide du programme",
+          "paragraphs": [
+            "Depuis la nuit, les averses tropicales s’enchaînent.",
+            "Grosse pluie, accalmie, puis à nouveau grosse pluie.",
+            "Heureusement, on a la voiture et aucune excursion prévue.",
+            "Plutôt que d’attendre à l’hôtel, Élodie reprend donc son rôle de pilote et on décide de partir faire tranquillement le tour de l’île."
+          ],
+          "featured": [],
+          "photos": []
+        },
+        {
+          "title": "Taha’a façon Jurassic Park",
+          "paragraphs": [
+            "Avec cette météo, l’île prend une ambiance complètement différente.",
+            "D’un côté le lagon, de l’autre une végétation extrêmement dense, avec les reliefs qui disparaissent parfois dans la brume.",
+            "Par moments, on se croirait presque dans Indiana Jones ou Jurassic Park.",
+            "Finalement, on est presque contents de découvrir Taha’a sous la pluie.",
+            "On profite aussi de la route pour observer les fleurs, toute cette végétation et même de la vanille sauvage."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO MAJEURE — ROUTE / BRUME / JUNGLE",
+              "note": "Une image très différente des lagons turquoise. Grande largeur.",
+              "layout": "hero",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "La bière de la fête des Pères",
+          "paragraphs": [
+            "Nous sommes dimanche et, en plus, c’est la fête des Pères.",
+            "On nous avait prévenus que peu de restaurants seraient ouverts.",
+            "On en trouve finalement un pour déjeuner.",
+            "Au moment de prendre l’apéritif, la serveuse demande à Alex s’il est papa.",
+            "Réponse honnête : non.",
+            "Elle lui explique alors que s’il avait été père, il aurait eu une bière offerte.",
+            "Petite déception.",
+            "Alex commande donc un cocktail.",
+            "Quelques minutes plus tard, la fameuse bière arrive quand même.",
+            "Gentillesse de la serveuse ou simplement pitié face à son air déçu ?",
+            "On ne le saura probablement jamais."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO SOUVENIR — BIÈRE / COCKTAIL",
+              "note": "Parfaite pour l’anecdote, sans prendre toute la page.",
+              "layout": "standard",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Taha’a presque pour nous seuls",
+          "paragraphs": [
+            "Après le déjeuner, on continue par une partie de l’île que l’on n’avait pas encore vue.",
+            "Et il n’y a quasiment personne.",
+            "Des petites routes, énormément de végétation, quelques maisons, le lagon…",
+            "On roule tranquillement sans objectif particulier.",
+            "Et on adore ça."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO FORTE — ROUTE DÉSERTE",
+              "note": "Une route vide et très végétale fonctionne très bien ici.",
+              "layout": "wide",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Dernière soirée à Taha’a",
+          "paragraphs": [
+            "Dans l’après-midi, retour à l’hôtel.",
+            "On profite de la petite plage privée pour mettre les pieds dans l’eau et regarder les poissons, puis de la piscine avant de commencer à refaire les valises.",
+            "Pour le dîner, on reste à l’hôtel afin d’éviter de retourner dans le même restaurant que le midi.",
+            "Raviolis au poisson et coquillages, puis gâteau glacé à la vanille.",
+            "C’est bon, mais on trouve l’ensemble un peu décevant par rapport au prix.",
+            "Pas très grave.",
+            "Cette journée nous aura surtout permis de découvrir une facette beaucoup plus sauvage et paisible de Taha’a."
+          ],
+          "featured": [],
+          "photos": []
+        }
+      ],
+      "previous": {
+        "date": "26-06-20",
+        "title": "Entre lagon et traditions"
+      },
+      "next": {
+        "date": "26-06-22",
+        "title": "De Taha’a à Bora Bora"
+      }
+    },
+    "26-06-22": {
+      "dateLabel": "22 juin 2026",
+      "chapter": "Taha’a / Bora Bora",
+      "title": "De Taha’a à Bora Bora",
+      "route": "Taha’a → Raiatea → Bora Bora",
+      "activeIsland": "borabora",
+      "heroHint": "Bora Bora vue depuis l’avion ou première grande vue du lagon à l’arrivée.",
+      "sequences": [
+        {
+          "title": "Au revoir Taha’a",
+          "paragraphs": [
+            "Après le petit déjeuner, on quitte le lodge sous la pluie.",
+            "On refait le plein de la voiture, on rend la location puis on reprend le bateau jusqu’à l’aéroport de Raiatea."
+          ],
+          "featured": [],
+          "photos": []
+        },
+        {
+          "title": "Essayer de suivre les Bleus",
+          "paragraphs": [
+            "À l’aéroport, on essaie de suivre le match de l’équipe de France.",
+            "Avec le réseau, ce n’est franchement pas gagné.",
+            "Vers 11 h 45, il est temps d’embarquer pour Bora Bora."
+          ],
+          "featured": [],
+          "photos": []
+        },
+        {
+          "title": "Moins de vingt minutes",
+          "paragraphs": [
+            "Le vol est extrêmement court.",
+            "Moins de vingt minutes après le décollage, Bora Bora apparaît déjà.",
+            "Et première bonne nouvelle : la météo semble meilleure.",
+            "Depuis l’avion, l’île et son lagon sont magnifiques."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO MAJEURE — BORA BORA VUE DU CIEL",
+              "note": "La grande image d’arrivée.",
+              "layout": "hero",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Une tête connue sur le bateau",
+          "paragraphs": [
+            "À l’arrivée, on prend le taxi boat pour rejoindre l’île principale.",
+            "Et là, surprise : on recroise Clément, qui séjournait dans la même pension que nous à Maupiti.",
+            "On ne s’attendait absolument pas à le revoir ici.",
+            "Et ce n’est pas fini : on le recroisera encore un peu plus tard sur la plage."
+          ],
+          "featured": [],
+          "photos": []
+        },
+        {
+          "title": "Première impression de Bora Bora",
+          "paragraphs": [
+            "Une fois arrivés au quai, le contraste avec Maupiti et Taha’a est immédiat.",
+            "Beaucoup plus de touristes, de transferts et de mouvement.",
+            "Notre première réaction est assez simple : c’est un peu l’usine.",
+            "On prend ensuite le bus jusqu’à l’hôtel, où l’on nous accueille avec un jus.",
+            "On déjeune sur place en attendant de récupérer la chambre.",
+            "L’hôtel est vraiment sympa, notamment avec ses bungalows sur pilotis, et notre chambre est belle avec une superbe vue.",
+            "On part ensuite découvrir Matira, juste à côté.",
+            "Et là, surprise totale : la plage est quasiment vide.",
+            "Très peu de monde, beaucoup d’espace et le lagon devant nous.",
+            "Le contraste avec l’arrivée est énorme et on adore."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO FORTE — HÔTEL / BUNGALOWS",
+              "note": "Pour le contraste avec l’arrivée touristique.",
+              "layout": "wide",
+              "src": ""
+            },
+            {
+              "label": "PHOTO MAJEURE — MATIRA PRESQUE VIDE",
+              "note": "Très belle image inattendue pour Bora Bora.",
+              "layout": "hero",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Sébastien Patoche à Bora Bora",
+          "paragraphs": [
+            "Le soir, on choisit un restaurant que nous avions repéré pendant le trajet.",
+            "L’endroit est moderne, sympa et on mange très bien.",
+            "Les cocktails sont également très bons.",
+            "En revanche, niveau ambiance musicale polynésienne…",
+            "On arrive notamment sur Sébastien Patoche — Quand il pète il troue son slip, avant de poursuivre avec Francky Vincent en mangeant nos pizzas.",
+            "Pas exactement ce que l’on imaginait écouter à Bora Bora.",
+            "Mais ça nous fait beaucoup rire."
+          ],
+          "featured": [],
+          "photos": []
+        }
+      ],
+      "previous": {
+        "date": "26-06-21",
+        "title": "Taha’a à notre rythme"
+      },
+      "next": {
+        "date": "26-06-23",
+        "title": "Jardin de corail et lagon"
+      }
+    },
+    "26-06-23": {
+      "dateLabel": "23 juin 2026",
+      "chapter": "Bora Bora",
+      "title": "Jardin de corail et lagon",
+      "route": "Lagon de Bora Bora",
+      "activeIsland": "borabora",
+      "heroHint": "Le jardin de corail le plus coloré du voyage et de votre vie.",
+      "sequences": [
+        {
+          "title": "Pierre Bourgin reprend la mer",
+          "paragraphs": [
+            "Aujourd’hui, c’est notre dernière excursion du voyage et on est particulièrement impatients.",
+            "Le ciel est assez couvert avec une petite bruine.",
+            "En attendant le bateau, on reste quelques minutes sur le ponton de l’hôtel à regarder les poissons et les raies passer sous nos pieds.",
+            "Puis vient le moment d’embarquer.",
+            "Et évidemment :",
+            "« Pierre Bourgin ? »",
+            "Quelques îles plus tard, Pierre est toujours officiellement avec nous.",
+            "On monte à bord d’une magnifique pirogue décorée de motifs polynésiens avec notre guide et capitaine, Narii."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO FORTE — PIROGUE / PONTON",
+              "note": "Une belle ouverture pour la dernière excursion.",
+              "layout": "wide",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Notre dernière sortie dans le lagon",
+          "paragraphs": [
+            "Premier arrêt pour observer les requins à pointe noire.",
+            "Cette fois, ils sont plutôt discrets : on n’en voit qu’un ou deux.",
+            "Deuxième arrêt pour les manta.",
+            "L’eau est très trouble et, sans soleil, la visibilité est nettement moins bonne qu’à Maupiti. On aperçoit tout de même une petite raie manta.",
+            "Ce moment nous fait surtout prendre conscience de la chance incroyable que l’on avait eue quelques jours auparavant avec Arii.",
+            "Puis vient notre dernier arrêt snorkeling : le jardin de corail.",
+            "Et là, c’est totalement différent.",
+            "C’est tout simplement le plus beau fond marin que l’on ait vu pendant tout le voyage, et même le plus beau que l’on ait vu de notre vie.",
+            "Il y a davantage de profondeur, une quantité impressionnante de poissons et surtout une variété de coraux absolument incroyable.",
+            "Ce qui nous marque le plus, ce sont les couleurs.",
+            "On ne pensait pas qu’un récif pouvait encore avoir autant de nuances et autant de vie.",
+            "C’est magnifique."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO MAJEURE ABSOLUE — JARDIN DE CORAIL",
+              "note": "Une des photos les plus importantes du site. Pleine largeur.",
+              "layout": "hero",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Le motu de Narii",
+          "paragraphs": [
+            "Narii nous emmène ensuite sur son motu privé pour déjeuner.",
+            "Au buffet : poisson cru au lait de coco, thon poké et plusieurs spécialités polynésiennes.",
+            "Même les assiettes sont particulières : elles ont été tressées à la main par la femme de Narii.",
+            "Après le repas, on embarque dans une pirogue traditionnelle.",
+            "Nous sommes six et il faut réussir à ramer tous ensemble.",
+            "Alex est désigné capitaine : à lui de donner le rythme et d’annoncer les changements de côté.",
+            "Une lourde responsabilité.",
+            "Heureusement, tout le monde reviendra vivant.",
+            "On termine ensuite avec un atelier de tressage en pandanus pour fabriquer un marque-page.",
+            "Celui d’Élodie ressemble plutôt à ce qui était demandé.",
+            "Celui d’Alex relève d’une interprétation beaucoup plus personnelle.",
+            "À vous de juger."
+          ],
+          "featured": [
+            {
+              "label": "DUO — ASSIETTES / BUFFET",
+              "note": "Pour montrer le détail du motu.",
+              "layout": "duo",
+              "src": ""
+            },
+            {
+              "label": "DUO HUMORISTIQUE — LES DEUX MARQUE-PAGES",
+              "note": "Comparer les deux créations.",
+              "layout": "duo",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Un mois de mariage à Bora Bora",
+          "paragraphs": [
+            "Ce soir-là marque également une petite date symbolique : nous sommes le 23 juin, exactement un mois après notre mariage.",
+            "Le restaurant possède une navette qui vient directement nous chercher à l’hôtel.",
+            "Dans le véhicule, on fait le trajet avec un couple d’Américains qui fête ses 25 ans de mariage.",
+            "Ils nous expliquent qu’ils avaient eux aussi fait leur voyage de noces en Polynésie et qu’ils ont décidé d’y revenir vingt-cinq ans plus tard.",
+            "On trouve l’idée magnifique.",
+            "Évidemment, au bout de quelques échanges courageux, notre niveau d’anglais commence à montrer ses limites et la conversation devient un peu plus compliquée.",
+            "Mais leur histoire reste dans un coin de notre tête.",
+            "Peut-être que dans vingt-cinq ans, ce sera nous.",
+            "Pour célébrer notre premier mois de mariage, on commence par deux coupes de champagne.",
+            "Puis arrive une langouste d’environ 1,5 kg à partager à deux.",
+            "Et pour terminer : tarte au citron meringuée et tarte chocolat-passion.",
+            "On mange extrêmement bien et le cadre est superbe.",
+            "Un mois plus tôt, nous étions entourés de tous nos proches pour notre mariage.",
+            "Ce soir-là, nous sommes tous les deux à Bora Bora devant une énorme langouste.",
+            "Le premier mois se passe plutôt bien."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO MAJEURE — DÎNER DES 1 MOIS",
+              "note": "Une belle photo de vous deux ou de la langouste.",
+              "layout": "hero",
+              "src": ""
+            }
+          ],
+          "photos": []
+        }
+      ],
+      "previous": {
+        "date": "26-06-22",
+        "title": "De Taha’a à Bora Bora"
+      },
+      "next": {
+        "date": "26-06-24",
+        "title": "Le rêve polynésien"
+      }
+    },
+    "26-06-24": {
+      "dateLabel": "24 juin 2026",
+      "chapter": "Bora Bora",
+      "title": "Le rêve polynésien",
+      "route": "Bora Bora",
+      "activeIsland": "borabora",
+      "heroHint": "Votre bungalow sur pilotis avec accès direct au lagon.",
+      "sequences": [
+        {
+          "title": "Une matinée à l’InterContinental",
+          "paragraphs": [
+            "Pour notre dernier jour complet à Bora Bora, le soleil est enfin vraiment au rendez-vous.",
+            "Après avoir libéré notre chambre vers 11 h, direction l’InterContinental.",
+            "On est assez excités parce que, soyons clairs : InterContinental Bora Bora, ça claque quand même.",
+            "Après une petite négociation, on obtient des serviettes et l’autorisation de profiter de la plage privée avant notre massage.",
+            "Le lagon, les bungalows sur pilotis, le sable…",
+            "Cette fois, on est vraiment dans l’image parfaite que l’on se faisait de Bora Bora.",
+            "Pour déjeuner, Élodie choisit un chou farci façon tahitienne tandis qu’Alex prend de l’espadon et du barracuda.",
+            "On se régale.",
+            "Pas de dessert tout de suite : à 13 h, direction le massage.",
+            "Le véritable spa étant en travaux, les soins sont provisoirement installés dans un bungalow sur pilotis.",
+            "Franchement, comme solution de secours, on a connu pire.",
+            "Pendant 40 minutes, massage à l’huile chaude de monoï.",
+            "Après les bateaux, les randonnées, les avions et toutes les excursions, c’est exactement ce qu’il nous fallait.",
+            "Quant au vrai spa, les travaux devaient être terminés en 2028.",
+            "Enfin… si tout va bien. 😄"
+          ],
+          "featured": [
+            {
+              "label": "PHOTO MAJEURE — INTERCONTINENTAL",
+              "note": "Une image carte postale, très Bora Bora.",
+              "layout": "hero",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Enfin notre bungalow sur pilotis",
+          "paragraphs": [
+            "Retour à notre hôtel pour récupérer notre nouvelle chambre.",
+            "Et cette fois, c’est un bungalow sur pilotis.",
+            "Exactement l’image que l’on se faisait d’un voyage de noces en Polynésie.",
+            "Sous la terrasse se trouve un récif de corail et on peut descendre directement dans le lagon.",
+            "À peine les affaires posées, on saute à l’eau."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO MAJEURE ABSOLUE — BUNGALOW SUR PILOTIS",
+              "note": "Une des images symboliques du voyage de noces.",
+              "layout": "hero",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Deux heures dans le lagon",
+          "paragraphs": [
+            "On passe près de deux heures à explorer le récif.",
+            "Énormément de poissons et plein de choses à observer.",
+            "Puis Alex aperçoit un requin.",
+            "En excursion, quand un guide explique qu’il n’y a pas de danger, on se sent plutôt serein.",
+            "Mais seul dans l’eau, quand on aperçoit un requin au loin, qu’on ne sait pas vraiment quelle taille il fait, qu’il semble se rapprocher… puis qu’on le perd complètement de vue sans savoir où il est…",
+            "on fait tout de suite beaucoup moins le malin.",
+            "Pas question de sortir pour autant.",
+            "Alex continue son exploration et, emporté par tout ce qu’il y a à voir, finit même par s’éloigner un peu plus qu’il ne l’aurait dû.",
+            "Puis il aperçoit enfin une tortue.",
+            "Évidemment, il essaie de la suivre.",
+            "On découvre alors que si la tortue est lente sur terre, dans l’eau la situation est très différente.",
+            "La tortue devient le lièvre.",
+            "Alex devient la tortue.",
+            "Impossible de la rattraper.",
+            "Un peu plus tard, une raie pastenague apparaît et se dirige vers lui.",
+            "Sur le moment, Alex a vraiment l’impression qu’elle lui fonce dessus.",
+            "Cette fois, fin de l’exploration.",
+            "Retour stratégique sur la terrasse."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO MAJEURE — LA TORTUE",
+              "note": "Si la photo est suffisamment bonne, vraie mise en avant.",
+              "layout": "hero",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Dernier dîner à Bora Bora",
+          "paragraphs": [
+            "Le soir, on profite des cocktails offerts par l’hôtel pour notre voyage de noces avant de rejoindre le restaurant.",
+            "L’endroit est cool et, comme presque toujours depuis notre arrivée en Polynésie, on mange très bien.",
+            "À la table voisine, petite surprise : des Français qui viennent de Valence.",
+            "Se retrouver à Bora Bora, à l’autre bout du monde, à côté de personnes qui habitent quasiment chez nous est déjà assez improbable.",
+            "Bon, on aurait probablement pu savoir d’où ils venaient sans même leur parler.",
+            "Disons simplement qu’ils parlent vraiment très fort.",
+            "On profite donc d’une bonne partie de leur conversation sans vraiment l’avoir demandé. 😄"
+          ],
+          "featured": [],
+          "photos": []
+        },
+        {
+          "title": "Snorkeling de nuit",
+          "paragraphs": [
+            "De retour au bungalow, les lumières installées sous la terrasse attirent beaucoup de poissons.",
+            "Alex décide donc de retourner une dernière fois dans l’eau.",
+            "Dans le halo lumineux, c’est génial : on voit très bien les poissons et une partie du récif.",
+            "En revanche, dès que l’on quitte la lumière et que l’on entre dans l’ombre, l’ambiance devient immédiatement beaucoup moins rassurante.",
+            "Tout apparaît au dernier moment.",
+            "Et après le requin et la raie de l’après-midi, l’imagination travaille assez vite.",
+            "Le lagon de Bora Bora est magnifique.",
+            "Mais de nuit, il paraît tout de suite un peu moins accueillant."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO FORTE — LUMIÈRES SOUS LE BUNGALOW",
+              "note": "Si tu as une image de nuit avec les poissons éclairés.",
+              "layout": "wide",
+              "src": ""
+            }
+          ],
+          "photos": []
+        }
+      ],
+      "previous": {
+        "date": "26-06-23",
+        "title": "Jardin de corail et lagon"
+      },
+      "next": {
+        "date": "26-06-25",
+        "title": "Derniers instants en Polynésie"
+      }
+    },
+    "26-06-25": {
+      "dateLabel": "25 juin 2026",
+      "chapter": "Bora Bora / Tahiti",
+      "title": "Derniers instants en Polynésie",
+      "route": "Bora Bora → Tahiti",
+      "activeIsland": "tahiti",
+      "heroHint": "Coucher de soleil à Tahiti ou dernier lever de soleil à Bora Bora.",
+      "sequences": [
+        {
+          "title": "Un dernier matin à Bora Bora",
+          "paragraphs": [
+            "Réveil vers 6 h 30 pour admirer une dernière fois le lever du soleil à Bora Bora.",
+            "Après le petit déjeuner, il nous reste encore un peu de temps avant le départ.",
+            "Impossible de quitter notre bungalow sans remettre une dernière fois le masque et le tuba.",
+            "On replonge donc dans le lagon.",
+            "L’eau paraît un peu plus fraîche à Élodie que la veille, mais c’est quand même génial de pouvoir observer encore une dernière fois tous ces poissons avant de reprendre l’avion.",
+            "Et Alex retrouve une tortue.",
+            "Nouvelle tentative pour la suivre.",
+            "Même résultat que la veille.",
+            "La tortue gagne encore."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO FORTE — DERNIER LEVER DE SOLEIL / SNORKELING",
+              "note": "Belle ouverture nostalgique.",
+              "layout": "wide",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Au revoir Bora Bora",
+          "paragraphs": [
+            "Il faut finalement sortir de l’eau, terminer les valises et quitter le bungalow.",
+            "On reprend le bateau vers l’aéroport avec un dernier regard sur Bora Bora.",
+            "Puis direction Tahiti pour un vol de moins d’une heure.",
+            "On arrive à Papeete en début d’après-midi.",
+            "Cette fois, le voyage entre vraiment dans sa dernière ligne droite."
+          ],
+          "featured": [],
+          "photos": []
+        },
+        {
+          "title": "Derniers souvenirs à Papeete",
+          "paragraphs": [
+            "Avant de rejoindre notre hôtel, on demande au taxi de nous déposer au marché couvert de Papeete.",
+            "On se promène entre les stands et on achète quelques derniers souvenirs.",
+            "À ce stade, la vraie question commence surtout à être : comment tout cela va-t-il rentrer dans les valises ?",
+            "On rejoint ensuite notre dernier hôtel.",
+            "Et très bonne surprise : il est magnifique.",
+            "Notre chambre donne directement sur l’océan."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO FORTE — MARCHÉ DE PAPEETE",
+              "note": "Très utile pour différencier Tahiti des autres îles.",
+              "layout": "wide",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Cocktail et coucher de soleil",
+          "paragraphs": [
+            "Pour notre dernière soirée en Polynésie, on s’installe avec un cocktail face à l’océan.",
+            "Le soleil descend progressivement et le ciel se colore.",
+            "On commence alors à chercher des formes dans les nuages et à comparer ce que chacun croit reconnaître.",
+            "Ça nous fait beaucoup rire.",
+            "Un moment tout simple, mais exactement le genre de petit souvenir que l’on aime garder."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO MAJEURE — COUCHER DE SOLEIL À TAHITI",
+              "note": "Grande respiration calme avant la fin du voyage.",
+              "layout": "hero",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Vaiana dans la vraie vie",
+          "paragraphs": [
+            "Le soir, le restaurant de l’hôtel organise un spectacle de danse marquisienne.",
+            "Les hommes enchaînent des danses très puissantes, notamment le haka, tandis que les danses des femmes sont magnifiques.",
+            "Élodie résume parfaitement :",
+            "« C’est Vaiana dans la vraie vie ! »",
+            "Malheureusement, au cours de la soirée, Élodie commence à ne vraiment pas se sentir bien.",
+            "Gros mal de tête, mal de ventre et aucune envie de manger.",
+            "Elle ne mange quasiment rien.",
+            "Après toutes ces journées très remplies, son corps commence peut-être simplement à dire stop.",
+            "Ou alors, c’est peut-être juste l’idée de devoir rentrer qui la rend malade.",
+            "On espère surtout que ça ira mieux demain."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO FORTE — SPECTACLE MARQUISIEN",
+              "note": "Une image de danse ou haka.",
+              "layout": "wide",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Pas envie de partir… mais très envie de prendre l’avion",
+          "paragraphs": [
+            "Clairement, on serait bien restés quelques jours de plus.",
+            "Deux semaines sont passées extrêmement vite.",
+            "Mais paradoxalement, on est aussi super impatients d’être au lendemain.",
+            "Parce qu’une petite consolation nous attend pour le retour : la Business Class.",
+            "Donc oui, on est tristes de quitter la Polynésie.",
+            "Mais disons que savoir que notre siège pourra se transformer en lit aide quand même un peu à accepter la situation.",
+            "Réveil prévu à 4 h.",
+            "Cette fois, demain, on rentre."
+          ],
+          "featured": [],
+          "photos": []
+        }
+      ],
+      "previous": {
+        "date": "26-06-24",
+        "title": "Le rêve polynésien"
+      },
+      "next": {
+        "date": "26-06-26",
+        "title": "Il est temps de rentrer"
+      }
+    },
+    "26-06-26": {
+      "dateLabel": "26 juin 2026",
+      "chapter": "Retour",
+      "title": "Il est temps de rentrer",
+      "route": "Tahiti → Los Angeles → Paris",
+      "activeIsland": "",
+      "heroHint": "Vous deux installés en Business ou une belle photo de l’avion avant le départ.",
+      "sequences": [
+        {
+          "title": "Réveil à 4 h",
+          "paragraphs": [
+            "Finalement, le réveil à 4 h ne pique pas autant que prévu.",
+            "On s’était couchés relativement tôt la veille.",
+            "On rejoint l’aéroport vers 5 h 15, on s’enregistre puis on profite du salon Air Tahiti pour prendre le petit déjeuner avant l’embarquement.",
+            "Quitter la Polynésie nous rend forcément tristes.",
+            "Mais il faut reconnaître que l’on est aussi comme deux gamins à l’idée de découvrir enfin la Business."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO FORTE — SALON AVANT LE DÉPART",
+              "note": "Une image calme pour ouvrir le retour.",
+              "layout": "wide",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Première découverte de la Business",
+          "paragraphs": [
+            "Malgré tous nos efforts, on n’a pas réussi à obtenir deux sièges réellement côte à côte pour Papeete → Los Angeles.",
+            "Mais finalement, on s’en sort plutôt bien : seul le couloir nous sépare.",
+            "On aurait très bien pu se retrouver aux deux extrémités de la cabine.",
+            "Et dès que l’on s’installe, la petite frustration disparaît vite.",
+            "Le confort et le service font vraiment rêver.",
+            "On peut étendre les jambes, s’allonger complètement et surtout réellement dormir.",
+            "On mange très bien, on boit très bien et on profite à fond de l’expérience.",
+            "Après le vol aller, la différence est énorme."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO MAJEURE — SIÈGES BUSINESS",
+              "note": "Votre première vraie image de la Business.",
+              "layout": "hero",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Papeete → Los Angeles",
+          "paragraphs": [
+            "Les heures passent entre repas, boissons, films et sommeil.",
+            "Pouvoir s’allonger change absolument tout sur un vol aussi long.",
+            "On savait évidemment que la Business serait plus confortable.",
+            "Mais on ne pensait pas que l’écart serait à ce point-là.",
+            "C’est une expérience franchement inoubliable."
+          ],
+          "featured": [],
+          "photos": []
+        },
+        {
+          "title": "Escale à Los Angeles",
+          "paragraphs": [
+            "Arrivés à Los Angeles, on repasse par la douane américaine avant de rejoindre le salon Air France.",
+            "Cette fois, l’escale est quand même beaucoup plus agréable.",
+            "On s’installe, on prend une coupe de champagne et Alex profite même de l’occasion pour prendre une douche.",
+            "Puis il est déjà temps de repartir."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO FORTE — SALON AIR FRANCE LOS ANGELES",
+              "note": "Champagne, douche ou espace lounge.",
+              "layout": "wide",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Côte à côte, Nemo et dix heures de confort",
+          "paragraphs": [
+            "Au moment de découvrir nos places pour Los Angeles → Paris, excellente surprise.",
+            "On se retrouve finalement côte à côte sur les deux sièges du milieu.",
+            "On ne saura probablement jamais ce qu’il s’est passé à l’enregistrement, mais peu importe : c’est exactement ce que l’on voulait.",
+            "Les dix heures suivantes se passent entre repas, films et sommeil.",
+            "Le steward est super sympa et très drôle, ce qui rend encore le trajet plus agréable.",
+            "Et tous les deux, on regarde Le Monde de Nemo.",
+            "Sauf que cette fois, le film n’a plus vraiment la même saveur.",
+            "Pendant deux semaines, on vient de nager au milieu des poissons tropicaux, des coraux, des raies et des requins.",
+            "On se surprend donc à reconnaître à l’écran certains poissons que l’on vient de voir pour de vrai.",
+            "Une manière plutôt parfaite de prolonger encore un peu la Polynésie alors qu’elle est déjà derrière nous."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO SOUVENIR — NEMO SUR LES ÉCRANS",
+              "note": "Très joli clin d’œil de fin si cette photo existe.",
+              "layout": "duo",
+              "src": ""
+            }
+          ],
+          "photos": []
+        }
+      ],
+      "previous": {
+        "date": "26-06-25",
+        "title": "Derniers instants en Polynésie"
+      },
+      "next": {
+        "date": "26-06-27",
+        "title": "Retour à la maison"
+      }
+    },
+    "26-06-27": {
+      "dateLabel": "27 juin 2026",
+      "chapter": "Retour",
+      "title": "Retour à la maison",
+      "route": "Paris → Lyon",
+      "activeIsland": "",
+      "heroHint": "Dernier avion, arrivée à Lyon ou image symbolique de retour.",
+      "sequences": [
+        {
+          "title": "Retour en France",
+          "paragraphs": [
+            "Nous arrivons à Paris vers 16 h 45.",
+            "Et dès la sortie de l’avion : premier choc.",
+            "35 °C.",
+            "Une vraie canicule nous accueille.",
+            "Après deux semaines de chaleur tropicale, on pourrait penser que cela ne nous ferait plus grand-chose.",
+            "Mais entre les longues heures de vol, la fatigue et le décalage horaire, la chaleur parisienne est franchement difficile à supporter.",
+            "Et surtout, cette fois, il n’y a ni lagon turquoise ni cocotiers à côté."
+          ],
+          "featured": [],
+          "photos": []
+        },
+        {
+          "title": "Le bonheur du salon Air France",
+          "paragraphs": [
+            "Heureusement, il nous reste quelques heures avant notre dernier vol et nous avons accès au salon Air France.",
+            "À ce moment-là, c’est vraiment le bonheur.",
+            "Première priorité : prendre une douche et se changer.",
+            "Après autant d’heures dans l’avion et avec la chaleur, rien que cela donne l’impression de redevenir un peu humains.",
+            "Ensuite, on s’installe dans les fauteuils et on se pose.",
+            "Le salon propose évidemment de quoi boire et manger à volonté.",
+            "En temps normal, on aurait probablement profité davantage de tout ce qui est proposé.",
+            "Mais entre la chaleur, la fatigue et le décalage horaire, notre consommation devient nettement moins glamour que pendant les vols en Business :",
+            "de l’eau. Beaucoup d’eau.",
+            "On grignote un peu, on récupère et on profite surtout du calme pendant les trois heures d’attente."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO FORTE — DERNIER SALON",
+              "note": "Fauteuils, douche ou scène de repos.",
+              "layout": "wide",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Paris → Lyon",
+          "paragraphs": [
+            "Puis vient le moment d’embarquer une dernière fois.",
+            "Départ de Paris vers 20 h 15 pour un vol d’un peu plus d’une heure jusqu’à Lyon.",
+            "Après Tahiti → Los Angeles puis Los Angeles → Paris, ce dernier trajet paraît presque court.",
+            "À ce stade, on a surtout envie d’arriver.",
+            "Vers 21 h 25, nous atterrissons enfin à Lyon.",
+            "Cette fois, plus de correspondance.",
+            "Plus de taxi boat.",
+            "Plus de nouveau bateau.",
+            "Plus de prochain hôtel.",
+            "Retour à la maison."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO FORTE — DERNIER VOL / LYON",
+              "note": "Aile, panneau Lyon, bagages ou arrivée.",
+              "layout": "wide",
+              "src": ""
+            }
+          ],
+          "photos": []
+        },
+        {
+          "title": "Des souvenirs plein la tête",
+          "paragraphs": [
+            "On rentre forcément fatigués et un peu tristes que tout soit déjà terminé.",
+            "Mais surtout, on revient avec des milliers de photos, des dizaines d’anecdotes et des souvenirs que l’on sait déjà que l’on gardera toute notre vie.",
+            "Moorea, Maupiti, Taha’a, Bora Bora, Tahiti…",
+            "Les requins à pointe noire, les raies pastenagues, les manta, les tortues, les jardins de corail, les réveils beaucoup trop matinaux, les petits avions, les bateaux, les chansons au ukulélé, les repas, les rencontres, les galères, les énormes fous rires…",
+            "Et bien sûr, Pierre Bourgin.",
+            "Tout ce que l’on avait imaginé avant de partir… et surtout toutes ces choses que l’on n’aurait jamais pu prévoir.",
+            "C’était exactement le voyage de noces dont on rêvait."
+          ],
+          "featured": [
+            {
+              "label": "PHOTO MAJEURE — DERNIÈRE IMAGE DU VOYAGE",
+              "note": "Une image symbolique et émouvante avant l’épilogue.",
+              "layout": "hero",
+              "src": ""
+            }
+          ],
+          "photos": []
+        }
+      ],
+      "previous": {
+        "date": "26-06-26",
+        "title": "Il est temps de rentrer"
+      },
+      "next": null
+    }
+  },
+  "epilogue": {
+    "kicker": "Épilogue",
+    "title": "Merci pour ce voyage",
+    "paragraphs": [
+      "Deux semaines, cinq îles, des milliers de photos et probablement encore plus de souvenirs.",
+      "On aura nagé avec des requins, caressé des raies, observé des manta, vu des tortues, gravi une montagne, survolé Maupiti en ULM, traversé des lagons, découvert la culture polynésienne, goûté beaucoup de poisson cru et rencontré des personnes que l’on n’oubliera pas.",
+      "Mais surtout, on aura eu la chance de vivre le voyage de noces dont on rêvait.",
+      "Et si cette aventure a été possible, c’est aussi grâce à toutes les personnes qui ont participé à notre cagnotte de mariage.",
+      "Alors, une dernière fois :",
+      "Merci.",
+      "Merci d’avoir contribué, chacun à votre manière, à nous offrir tous ces moments que l’on gardera toute notre vie. ❤️"
+    ],
+    "signature": "Élodie & Alexandre",
+    "dates": "Polynésie française · 12 — 27 juin 2026",
+    "photoHint": "Une photo de vous deux calme et heureuse, choisie comme vraie dernière page d’album."
+  }
+};
